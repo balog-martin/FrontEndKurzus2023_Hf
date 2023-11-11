@@ -59,3 +59,29 @@ span {
     position: relative;
     margin: auto;
 }
+/* ********************************** */
+/* ********* Form formazasa ********* */
+/* ********************************** */
+form{
+    margin-bottom: 18px;
+}
+
+form > div{
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+form > div > label{
+    font-size: 12px;
+    white-space: nowrap;
+    text-align: left;
+    display: block;
+}
+form > div > input{
+    width: 100%;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+}
