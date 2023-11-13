@@ -42,21 +42,21 @@ body {
 /* *********** Headers ************** */
 /* ********************************** */
 h1, h2, h3, h4, h5, h6{
-    color: rgb(255, 0, 76);
+    color: rgb(157, 53, 100);
     text-shadow: 1px 1px 2px gray;
 }     
 
 h1 {               
-    filter: brightness(0.8);
+    filter: brightness(1);
 }
 h2 {
-    filter: brightness(0.6);
+    filter: brightness(0.90);
 }
 h3 {
-    filter: brightness(0.5);
+    filter: brightness(0.80);
 }
 h4 {
-    filter: brightness(0.4);
+    filter: brightness(0.70);
 }
 
 /* ********************************** */
