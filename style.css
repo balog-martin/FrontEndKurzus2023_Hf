@@ -1,3 +1,6 @@
+/* ********************************** */
+/* *************** Body ************* */
+/* ********************************** */
 body {
     margin: 0px;
     font-family: Montserrat;
@@ -5,8 +8,37 @@ body {
     background-color: rgba(149, 165, 165, 0.395);
 }
 
+/* ********************************** */
+/* ********* Navigáció ************** */
+/* ********************************** */
+
+.div_Navigation{
+    font-weight: bold;
+    text-shadow:  rgb(185, 184, 184);
+    height: 70px;
+    /*background-color: rgba(25, 25, 112, 0.516);*/
+    background-color: rgba(21, 49 , 82);
+    font-size: 24px;
+    padding-left: 50px;
+    padding-top: 35px;
+}
+
+.anchorNav{
+    margin-right: 50px;
+    color: wheat;
+    text-decoration: none;
+}
+
+.anchorNav:hover{
+    background-color: rgba(189, 183, 107, 0.338);
+}
+
+
+/* ********************************** */
+/* *********** Headers ************** */
+/* ********************************** */
 h1, h2, h3, h4, h5, h6{
-    color: red;
+    color: rgb(255, 0, 76);
     text-shadow: 1px 1px 2px gray;
 }     
 
@@ -22,6 +54,34 @@ h3 {
 h4 {
     filter: brightness(0.4);
 }
+
+/* ********************************** */
+/* *********** Cím, alcím *********** */
+/* ********************************** */
+.cimStyle{
+    font-size: 60px;
+    color: rgb(239, 237, 237);
+    filter: brightness(0.98);
+    text-shadow: 1px 2px 2px gray;   
+    text-transform: uppercase;
+
+    margin-block-start: 0px; 
+    margin: auto;
+    display:table-cell;
+    vertical-align: middle; 
+}
+
+.alcimStyle{
+    font-size: 18px;
+    filter: brightness(0.90);
+    padding-top: 35px;
+    line-height: 28px;
+}
+
+
+/* ********************************** */
+/* *********** Szöveg *************** */
+/* ********************************** */
 
 p {
     line-height: 34px; /*paragráfuson belül*/
@@ -39,14 +99,6 @@ span {
     background-color: rgba(246, 255, 0, 0.5) ;
 }
 
-.div_Navigation{
-    height: 50px;
-    background-color: rgba(25, 25, 112, 0.516);
-    padding-left: 30px;
-    padding-top: 30px;
-    font-size: 24px;
-}
-
 .div_ForTwoColumns{
     margin: auto;
     display: inline;
@@ -59,6 +111,7 @@ span {
     position: relative;
     margin: auto;
 }
+
 /* ********************************** */
 /* ********* Form formazasa ********* */
 /* ********************************** */

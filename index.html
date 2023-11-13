@@ -12,9 +12,34 @@
     </head>
     <body>
         <div class="div_Navigation">
-            <a id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
-            <a id="anchorIDRegistration" href="#idH1Registration">Regisztráció</a>
+            <a class="anchorNav" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
+            <a class="anchorNav" id="anchorIDRegistration" href="#idH1Registration">Regisztráció</a>
         </div>
+
+        <div style="
+                width: 100vw;
+                height:  600px;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-image: url(Backgrounds/beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky.jpg);
+                vertical-align: middle;
+            ">  
+            <div style="text-align: center;
+                        width: 400px;
+                        margin: auto;
+                        padding-top: 40px;"> <!-- Ez a style kell, h közepre kerüljön a szöveg...-->              
+                <div>
+                    <h1 class="cimStyle">Frontendes hegyes cím  </h1>   
+                </div>
+                <div>
+                    <h2 class="cimStyle alcimStyle">Alcím valami sejtelmes dolognak, három ponttal a végén...</h2>       
+                </div>
+            </div>    
+
+    
+        </div>
+
         <div style="width: 70%;
                     margin: auto;">
 
@@ -190,8 +215,7 @@
             <hr>
             <h1 id="idH1Registration">Regisztráció</h1>
             <div>
-                <form   action="" 
-                        onsubmit="return confirm('Biztosan elküldi a jelentkezést?')">
+                <form   onsubmit="return confirm('Biztosan elküldi a jelentkezést?')">
                     <div >
                         <label for="surNameInput">Vezetéknév:</label>
                         <input type="text" name="surName" id="surNameInput" required minlength="1" placeholder="Ide írja be vezetéknevet">
@@ -203,7 +227,7 @@
                     <div >
                         <label for="dateOfBirthInput">Születési dátum:</label>
                         <input  style="width: auto;"
-                                type="date" name="dateOfBirth" id="dateOfBirthInput" placeholder="Ide írja be születési dátumot">
+                                type="date" name="dateOfBirth" id="dateOfBirthInput">
                     </div>
 
                     <div >
@@ -239,7 +263,9 @@
                         <input  style="width: auto;"
                                 type="checkbox" 
                                 name="policyAccepted" 
-                                id="policyAcceptedInput" >
+                                id="policyAcceptedInput"
+                                required
+                                >
                         <label  style= "display: inline;
                                         "
                                 for="policyAcceptedInput">Elfogadtam az adatkezelési tájékoztatót</label>
@@ -264,7 +290,7 @@
 
         </div>
         <div class="div_Navigation">
-            <a id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
+            <a class="anchorNav" id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
         </div>   
 
     </body>
