@@ -14,6 +14,7 @@
         <div class="div_Navigation">
             <a class="anchorNav" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
             <a class="anchorNav" id="anchorIDRegistration" href="#idH1Registration">Regisztráció</a>
+            <a class="anchorNav" id="anchorIDSendArticle" href="#idH1SendArcticle">Cikk küldése</a>
         </div>
 
         <div style="
@@ -282,10 +283,49 @@
                                         "
                                 for="newsletterInput">Jelentkezem a hírlevélre</label>
                     </div>
-                    <button 
-                            type="submit">Elküld</button>
+                    <button type="submit">Elküld</button>
                 </form>
                 
+            </div>
+
+            
+            <hr>
+            <h1 id="idH1SendArcticle">Cikk küldése</h1>
+            <div>
+                <form name="formF2">
+                    <div >
+                        <label for="surNameInputF2">Vezetéknév*:</label>
+                        <input type="text" name="surNameF2" id="surNameInputF2" required minlength="1" placeholder="Ide írja be vezetéknevet">
+                    </div>
+                    <div >
+                        <label for="firstNameInputF2">Keresztnév*:</label>
+                        <input type="text" name="firstNameF2" id="firstNameInputF2" required minlength="1" placeholder="Ide írja be keresztnevet">
+                    </div>
+                    <div >
+                        <label for="telNrInputF2">Telefonszám:</label>
+                        <input type="tel" name="telNrF2" id="telNrInputF2" placeholder="Ide írja be a telefonszámot">
+                    </div>
+                    <div >
+                        <label for="emailInputF2">E-mail cím*:</label>
+                        <input type="email" name="emailF2" id="emailInputF2" 
+                                required 
+                                placeholder="Ide írja az e-mailcímet"
+                                pattern=".+@example\.com">
+                    </div>
+                    <div>
+                        <label for="ageInputF2">Életkor</label>
+                        <input type="number" name="ageF2" id="ageInputF2" placeholder="Ide írja az életkorát" >
+                    </div>
+                    <div>
+                        <label for="messageTextareaF2">Üzenet</label>
+                        <textarea name="messageF2" id="messageTextareaF2"></textarea>
+                    </div>
+                    <div>
+                        <label>*: Kötelezően kitöltendő mező </label>
+                    </div>
+                    <button type="submit">Elküld</button>
+
+                </form>
             </div>
 
         </div>
