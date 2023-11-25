@@ -107,7 +107,7 @@ h4 {
 /* ********************************** */
 /* *********** Szöveg *************** */
 /* ********************************** */
-div.Content{
+main{
     width: 70%;
     margin: auto;
 }
@@ -158,6 +158,13 @@ img.centeredLarge{
     margin-right: auto;
     width: 80%;
 }
+
+figcaption {
+    color: rgb(101, 101, 101);
+    font-style: italic;
+    margin-top: 15px;
+    text-align: center;
+  }
 
 /* ********************************** */
 /* ********* Form formazasa ********* */
