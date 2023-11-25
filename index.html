@@ -11,27 +11,26 @@
         <link rel="stylesheet" href="style.css" >
     </head>
     <body>
-        <div class="Navigation">
-            <a class="Navigation" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
-            <a class="Navigation" id="anchorIDRegistration" href="#idH1Registration">Regisztráció</a>
-            <a class="Navigation" id="anchorIDSendArticle" href="#idH1SendArcticle">Cikk küldése</a>
-        </div>
-
-        <div class="HeaderBackgroundImage">  
-            <div class="HeaderText">               
-                <div>
-                    <h1 class="title">Frontendes hegyes cím  </h1>   
-                </div>
-                <div>
-                    <h2 class="title subtitle">Alcím valami sejtelmes dolognak, három ponttal a végén...</h2>       
-                </div>
-            </div>    
-
+        <header>
+            <nav class="NavigationHorizontal">
+                <a class="NavigationLink" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
+                <a class="NavigationLink" id="anchorIDRegistration" href="#idH1Registration">Regisztráció</a>
+                <a class="NavigationLink" id="anchorIDSendArticle" href="#idH1SendArcticle">Cikk küldése</a>
+            </nav>
     
-        </div>
+            <div class="HeaderBackgroundImage">  
+                <div class="HeaderText">               
+                    <div>
+                        <h1 class="title">Frontendes hegyes cím  </h1>   
+                    </div>
+                    <div>
+                        <h2 class="title subtitle">Alcím valami sejtelmes dolognak, három ponttal a végén...</h2>       
+                    </div>
+                </div>    
+            </div>
+        </header>
 
-        <div style="width: 70%;
-                    margin: auto;">
+        <div class="Content">
 
             <h1>Cimsor 1 - Paragrafus, cimsor, br-tag es hr-tag gyakorlas</h1>
             <div class="TwoColumns">
@@ -323,9 +322,12 @@
             </div>
 
         </div>
-        <div class="Navigation">
-            <a class="Navigation" id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
-        </div>   
+
+        <footer class="NavigationHorizontal">
+            <nav class="NavigationHorizontal">
+                <a class="NavigationLink" id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
+            </nav>
+        </footer>   
 
     </body>
 </html>

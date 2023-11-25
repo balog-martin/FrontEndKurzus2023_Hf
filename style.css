@@ -61,7 +61,7 @@ div.HeaderText
 /* *********** Navigáció ************ */
 /* ********************************** */
 
-div.Navigation{
+nav.NavigationHorizontal{
     font-weight: bold;
     text-shadow:  rgb(185, 184, 184);
     height: 70px;
@@ -72,13 +72,13 @@ div.Navigation{
     padding-top: 35px;
 }
 
-a.Navigation{
+a.NavigationLink{
     margin-right: 50px;
     color: wheat;
     text-decoration: none;
 }
 
-a.Navigation:hover{
+a.NavigationLink:hover{
     background-color: rgba(189, 183, 107, 0.338);
 }
 
@@ -107,6 +107,10 @@ h4 {
 /* ********************************** */
 /* *********** Szöveg *************** */
 /* ********************************** */
+div.Content{
+    width: 70%;
+    margin: auto;
+}
 
 p {
     line-height: 34px; /*paragráfuson belül*/
@@ -124,6 +128,8 @@ span.HighlightYellow{
     background-color: rgba(246, 255, 0, 0.5) ;
 }
 
+/*  Megyjegyzes: ez a 2 oszlopos elrendezes nem müködik. 
+    TODO: miutan tanultunk a felxboxrol, javitani!*/
 div.TwoColumns{
     margin: auto;
     display: inline;
