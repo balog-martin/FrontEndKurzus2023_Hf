@@ -63,7 +63,7 @@ div.HeaderText
 
 nav.NavigationHorizontal{
     font-weight: bold;
-    text-shadow:  rgb(185, 184, 184);
+    text-shadow: rgb(185, 184, 184);
     height: 70px;
     /*background-color: rgba(25, 25, 112, 0.516);*/
     background-color: rgba(21, 49 , 82);
