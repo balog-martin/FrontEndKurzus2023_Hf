@@ -13,7 +13,52 @@ body {
 }
 
 /* ********************************** */
-/* ********* Navigáció ************** */
+/* ************ Header ************** */
+/* ********************************** */
+div.HeaderBackgroundImage
+{
+    width: 100vw;
+    height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(Backgrounds/beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky.jpg);
+    vertical-align: middle;
+}
+
+/* Ez a style kell, h közepre kerüljön a szöveg...*/
+div.HeaderText 
+{
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.title{
+    font-size: 60px;
+    color: rgb(239, 237, 237);
+    filter: brightness(0.98);
+    text-shadow: 1px 2px 2px gray;   
+    text-transform: uppercase;
+
+    margin-block-start: 0px; 
+    margin: auto;
+    display:table-cell;
+    vertical-align: middle; 
+}
+
+.subtitle{
+    font-size: 18px;
+    filter: brightness(0.90);
+    padding-top: 35px;
+    line-height: 28px;
+}
+
+
+
+/* ********************************** */
+/* *********** Navigáció ************ */
 /* ********************************** */
 
 div.Navigation{
@@ -39,7 +84,7 @@ a.Navigation:hover{
 
 
 /* ********************************** */
-/* *********** Headers ************** */
+/* *********** Headings ************* */
 /* ********************************** */
 h1, h2, h3, h4, h5, h6{
     color: rgb(157, 53, 100);
@@ -58,30 +103,6 @@ h3 {
 h4 {
     filter: brightness(0.70);
 }
-
-/* ********************************** */
-/* *********** Cím, alcím *********** */
-/* ********************************** */
-.cimStyle{
-    font-size: 60px;
-    color: rgb(239, 237, 237);
-    filter: brightness(0.98);
-    text-shadow: 1px 2px 2px gray;   
-    text-transform: uppercase;
-
-    margin-block-start: 0px; 
-    margin: auto;
-    display:table-cell;
-    vertical-align: middle; 
-}
-
-.alcimStyle{
-    font-size: 18px;
-    filter: brightness(0.90);
-    padding-top: 35px;
-    line-height: 28px;
-}
-
 
 /* ********************************** */
 /* *********** Szöveg *************** */
