@@ -138,6 +138,22 @@ div.ContentTwoColumns {
 }
 
 /* ********************************** */
+/* ************* Image ************** */
+/* ********************************** */
+img.centeredLarge{
+    width: 500px;
+    display: block;
+    background-image: url(Backgrounds/majestic-mountain_small.jpg) ;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 10px black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* ********************************** */
 /* ********* Form formazasa ********* */
 /* ********************************** */
 form{
