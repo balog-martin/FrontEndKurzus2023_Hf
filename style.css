@@ -16,7 +16,7 @@ body {
 /* ********* Navigáció ************** */
 /* ********************************** */
 
-.div_Navigation{
+div.Navigation{
     font-weight: bold;
     text-shadow:  rgb(185, 184, 184);
     height: 70px;
@@ -27,13 +27,13 @@ body {
     padding-top: 35px;
 }
 
-.anchorNav{
+a.Navigation{
     margin-right: 50px;
     color: wheat;
     text-decoration: none;
 }
 
-.anchorNav:hover{
+a.Navigation:hover{
     background-color: rgba(189, 183, 107, 0.338);
 }
 
@@ -99,17 +99,17 @@ span {
     background-color: rgba(255, 0, 0, 0.5) ;
 }
 
-.spanEgyedi{
+span.HighlightYellow{
     background-color: rgba(246, 255, 0, 0.5) ;
 }
 
-.div_ForTwoColumns{
+div.TwoColumns{
     margin: auto;
     display: inline;
     box-sizing: border-box;
 }
 
-.div_ContentInTwoColumns {
+div.ContentTwoColumns {
     width: 40%;
     display: inline;
     position: relative;
