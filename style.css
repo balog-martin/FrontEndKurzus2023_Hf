@@ -1,4 +1,46 @@
 /* ********************************** */
+/* ******** Media queries *********** */
+/*  Mobile first, target width 360px  */
+/* ********************************** */
+
+/* Mobile*/
+@media screen and (max-width: 640px){
+    main{
+        width: 85%;
+        margin: auto;
+    }
+    .HeaderText{
+        width: 300px;
+    }
+    .title{
+        font-size: 28px;       
+    }
+    .subtitle{
+        font-size: 13px;       
+    }
+}  
+
+/* Desktop*/
+@media screen and (min-width: 641px){
+    main{
+        width: 70%;
+        margin: auto;
+    }
+    div.HeaderBackgroundImage{
+        height: 400px;
+    }
+    .HeaderText{
+        width: 400px;
+    }
+    .title{
+        font-size: 60px;
+    }
+    .subtitle{
+        font-size: 18px;       
+    }
+} 
+
+/* ********************************** */
 /* *************** Global *********** */
 /* ********************************** */
 html{
@@ -18,7 +60,6 @@ body {
 div.HeaderBackgroundImage
 {
     width: 100vw;
-    height: 600px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -29,14 +70,13 @@ div.HeaderBackgroundImage
 /* Ez a style kell, h közepre kerüljön a szöveg...*/
 div.HeaderText 
 {
+    width: 75vw;
     text-align: center;
-    width: 400px;
     margin: auto;
     padding-top: 40px;
 }
 
 .title{
-    font-size: 60px;
     color: rgb(239, 237, 237);
     filter: brightness(0.98);
     text-shadow: 1px 2px 2px gray;   
@@ -44,14 +84,14 @@ div.HeaderText
 
     margin-block-start: 0px; 
     margin: auto;
-    display:table-cell;
+    display:block;
     vertical-align: middle; 
 }
 
 .subtitle{
-    font-size: 18px;
     filter: brightness(0.90);
     padding-top: 35px;
+    padding-bottom: 12px;
     line-height: 28px;
 }
 
@@ -107,12 +147,8 @@ h4 {
 /* ********************************** */
 /* *********** Szöveg *************** */
 /* ********************************** */
-main{
-    width: 70%;
-    margin: auto;
-}
 
-p {
+p{
     line-height: 34px; /*paragráfuson belül*/
     margin-bottom: 30px; /*paragráfusok között*/
 }
