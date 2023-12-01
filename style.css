@@ -25,6 +25,10 @@
     .menuDesktop{
         display: flex; 
     }
+
+    form > div{
+        width: 300px;
+    }
 }  
 
 /* Desktop*/
@@ -53,6 +57,9 @@
     }
     .menuMobile{
         display: none;
+    }
+    form > div{
+        width: 400px;
     }
 } 
 
@@ -260,8 +267,7 @@ form{
 }
 
 form > div{
-    margin-bottom: 10px;
-    width: 400px;
+    margin-bottom: 10px;   
 }
 
 form > div > label{
