@@ -11,15 +11,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="style2.css" >
         <link rel="stylesheet" href="style.css" >
     </head>
     <body>
         <header>
-            <nav class="NavigationHorizontal">
-                <a class="NavigationLink" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
-                <a class="NavigationLink" id="anchorIDRegistration" href="#idH1Registration">Regisztráció</a>
-                <a class="NavigationLink" id="anchorIDSendArticle" href="#idH1SendArcticle">Cikk küldése</a>
-            </nav>
+            <nav class="menu menuDesktop">             
+                <a class="navLink" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
+                <a class="navLink" id="anchorIDRegistration" href="#idH2Registration">Regisztráció</a>
+                <a class="navLink" id="anchorIDSendArticle" href="#idH2SendArcticle">Cikk küldése</a>    
+             </nav>
     
             <div class="HeaderBackgroundImage">  
                 <div class="HeaderText">               
@@ -215,7 +216,7 @@
             </div>
 
             <hr>
-            <h2 id="idh2Registration">Regisztráció</h2>
+            <h2 id="idH2Registration">Regisztráció</h2>
             <div>
                 <form onsubmit="return confirm('Biztosan elküldi a jelentkezést?')">
                     <div >
@@ -289,7 +290,7 @@
 
             
             <hr>
-            <h2 id="idh2SendArcticle">Cikk küldése</h2>
+            <h2 id="idH2SendArcticle">Cikk küldése</h2>
             <div>
                 <form name="formF2">
                     <div>
@@ -328,9 +329,9 @@
 
         </main>
 
-        <footer class="NavigationHorizontal">
-            <nav class="NavigationHorizontal">
-                <a class="NavigationLink" id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
+        <footer >
+            <nav class="menu menuHoriz">
+                <a class="navLink" id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
             </nav>
         </footer>   
 
