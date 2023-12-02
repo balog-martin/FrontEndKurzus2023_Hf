@@ -22,9 +22,6 @@
         display: flex;
         flex-direction: column;
     }
-    .menuDesktop{
-        display: flex; 
-    }
 
     form > div{
         width: 300px;
@@ -53,15 +50,52 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
-    }
-    .menuMobile{
-        display: none;
     }
     form > div{
         width: 400px;
     }
 } 
+
+/* ********************************** */
+/* ********* Media query *********** */
+/*  Dark mode  */
+/* ********************************** */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: rgb(160, 156, 156);
+        background-color: rgb(24, 24, 24);
+    }
+    span{
+        filter: opacity(0.7);
+        background-color: rgba(255, 0, 0, 0.5) ;
+    }
+    .quoteBox{
+        filter: opacity(0.7);
+        color: rgba(255, 0, 0, 0.5) ;
+    }
+    .menu{
+        background-color: rgb(13, 30, 49);
+    }
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: rgb(45, 45, 45);
+        background-color: rgba(149, 165, 165, 0.395);
+    }
+    span{
+        filter: brightness(0.5) opacity(0.7);
+        background-color: rgba(255, 0, 0, 0.5) ;
+    }
+    .quoteBox{
+        filter: brightness(0.5) opacity(1);
+        color: rgba(255, 0, 0, 0.5) ;
+    }
+    .menu{
+        background-color: rgba(21, 49 , 82);
+    }
+}
+
+
 
 /* ********************************** */
 /* *************** Global *********** */
@@ -73,8 +107,6 @@ html{
 body {
     margin: 0px;
     font-family: Montserrat;
-    color: rgb(45, 45, 45);
-    background-color: rgba(149, 165, 165, 0.395);
 }
 
 /* ********************************** */
@@ -140,9 +172,7 @@ a.navLink:hover{
 }
 
 /* ----- Menü közös ------- */
-.menu{
-    background-color: rgba(21, 49 , 82);
-}
+
 
 .menu ul {
     appearance: none;
@@ -153,30 +183,17 @@ a.navLink:hover{
 .menu li {
     display: inline;
 }     
-/* ----- Horizontalis menü ------- */
-.menuDesktop{
+/* ----- Menü fent/lent ------- */
+.menuUpAndDown{
     padding-left: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.menuDesktop a{
+.menuUpAndDown a{
     display: inline-block;
     padding: 20px 20px;
 }
-
-/* ------- Side-menü ------- */
-
-.menuMobile{
-    margin-top: 30px;
-    width: 250px;
-}
-.menuMobile a{
-    display: block;
-    padding: 20px;
-}
-
-
 
 
 
@@ -213,8 +230,6 @@ p{
 span {
     font-weight: bold;
     font-style: italic;
-    filter: brightness(0.5) opacity(0.7);
-    background-color: rgba(255, 0, 0, 0.5) ;
 }
 
 span.HighlightYellow{
@@ -234,6 +249,20 @@ div.ContentTwoColumns {
     display: inline;
     position: relative;
     margin: auto;
+}
+.quoteBox{
+    width: 400px;           
+    border: 5px solid currentColor;
+    margin: auto;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.quoteAuthor{
+    text-align: right;
+    margin-right: 20px;
 }
 
 /* ********************************** */
