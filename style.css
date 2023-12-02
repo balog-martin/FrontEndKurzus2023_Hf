@@ -22,7 +22,13 @@
         display: flex;
         flex-direction: column;
     }
-
+    .quoteBox{
+        width: 270px;   
+    }
+    img.centeredLarge{
+        width: 100%;
+        margin: 0;
+    }
     form > div{
         width: 300px;
     }
@@ -51,6 +57,12 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+    .quoteBox{
+        width: 400px;   
+    }
+    img.centeredLarge{
+        width: 80%;
+    }
     form > div{
         width: 400px;
     }
@@ -76,6 +88,7 @@
     .menu{
         background-color: rgb(13, 30, 49);
     }
+}
 
 @media (prefers-color-scheme: light) {
     body {
@@ -251,7 +264,6 @@ div.ContentTwoColumns {
     margin: auto;
 }
 .quoteBox{
-    width: 400px;           
     border: 5px solid currentColor;
     margin: auto;
     text-align: center;
@@ -269,7 +281,6 @@ div.ContentTwoColumns {
 /* ************* Image ************** */
 /* ********************************** */
 img.centeredLarge{
-    width: 500px;
     display: block;
     background-image: url(Backgrounds/majestic-mountain_small.jpg) ;
     background-size: contain;
@@ -278,7 +289,6 @@ img.centeredLarge{
     box-shadow: 5px 5px 10px black;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
 }
 
 figcaption {
@@ -318,4 +328,13 @@ textarea{
     width: 100%;
     resize: vertical;
     min-height: 80px;
+}
+
+.acceptPolicy{
+    margin-top: 12px;
+    margin-bottom: 3px;
+}
+
+.autoWidht{
+    width: auto;
 }
