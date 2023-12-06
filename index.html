@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        
         <title>Hf - Balog Martin</title>
 
         <!-- GoogleFont-->
@@ -8,15 +11,19 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="style2.css" >
         <link rel="stylesheet" href="style.css" >
     </head>
     <body>
         <header>
-            <nav class="NavigationHorizontal">
-                <a class="NavigationLink" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
-                <a class="NavigationLink" id="anchorIDRegistration" href="#idH1Registration">Regisztráció</a>
-                <a class="NavigationLink" id="anchorIDSendArticle" href="#idH1SendArcticle">Cikk küldése</a>
-            </nav>
+            <nav class="menu menuUpAndDown">             
+                <a class="navLink" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
+                <a class="navLink" id="anchorIDRegistration" href="#idH2Registration">Regisztráció</a>
+                <a class="navLink" id="anchorIDSendArticle" href="#idH2SendArcticle">Cikk küldése</a>    
+                <a class="navLink" id="anchorIDSecondPage" href="Page1.html">Masik oldal</a>    
+                <a class="navLink" id="anchorIDGitHub" href="https://github.com/" target="_blank" >GitHub</a>    
+                <a class="navLink" id="anchorIDRobotdreams" href="https://robotdreams.hu/" target="_blank" >Robotdreams</a>    
+             </nav>
     
             <div class="HeaderBackgroundImage">  
                 <div class="HeaderText">               
@@ -32,11 +39,11 @@
 
         <main class="Content">
 
-            <h1>Cimsor 1 - Paragrafus, cimsor, br-tag es hr-tag gyakorlas</h1>
+            <h2>Cimsor2 - Paragrafus, cimsor, br-tag es hr-tag gyakorlas</h2>
             <div class="TwoColumns">
                 
                 <div class="ContentTwoColumns">
-                    <h2>Cimsor 2 - Lorem ipsum 1</h2>
+                    <h3>Cimsor3 - Lorem ipsum 1</h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nullam vestibulum orci a sapien imperdiet maximus. 
@@ -52,7 +59,7 @@
         
                 </div>
                 <div class="ContentTwoColumns">
-                    <h2>Cimsor 2 - Lorem ipsum 2</h2>
+                    <h3>Cimsor3 - Lorem ipsum 2</h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                         Aenean commodo ligula eget dolor
@@ -75,30 +82,17 @@
             </div>
 
             <div>
-                <h2>Cimsor 2 - Nincs kisebb cimsor, csak 2 paragrafus</h2>
+                <h3>Cimsor3 - Nincs kisebb cimsor, csak 2 paragrafus</h3>
                 <p>
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
                     doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
                 </p>
 
-                <div style="width: 400px;
-            
-                            filter: brightness(0.5) opacity(1);
-                            color: rgba(255, 0, 0, 0.5) ;
-                            border: 5px solid currentColor;
-                            margin: auto;
-                            text-align: center;
-                            padding: 10px 10px 10px 10px;
-                            font-style: italic;
-                      
-                            ">
+                <div class="quoteBox">
                     <p>
-                        "Ez itt egy közepre igazitott div. "
-                        
+                        "Ez itt egy közepre igazitott div. "                      
                     </p>    
-                    <p style="text-align: right;
-                                margin-right: 20px;
-                    ">
+                    <p class="quoteAuthor">
                         Paulo Coelho
                     </p>    
                 </div>
@@ -118,8 +112,8 @@
             </div>
 
 
-        <h2>Cimsor 2 - Van kisebb cimsor, azok alatt 2-2 paragrafus</h2>
-            <h3>Cimsor3</h3>           
+        <h3>Cimsor3 - Van kisebb cimsor, azok alatt 2-2 paragrafus</h3>
+            <h4>Cimsor4</h4>           
                 <p>
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt 
                     <span>span eleje dfaskdfjsd span sfasdfcx span dsdfd span vege</span>
@@ -141,7 +135,7 @@
                 </p>
  
 
-            <h3>Cimsor3</h3>           
+            <h4>Cimsor4</h4>           
                 <p>
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt 
                     <span>span eleje dfaskdfjsd span sfasdfcx span dsdfd span vege</span>
@@ -163,8 +157,8 @@
     
             
             
-        <h1>Cimsor 1</h1>
-            <h2>Cimsor 2</h2>
+        <h2>Cimsor2</h2>
+            <h3>Cimsor3</h3>
             <p>
                 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there 
                 <span>span eleje dfaskdfjsd span sfasdfcx span dsdfd span vege</span>
@@ -178,10 +172,10 @@
             </p>
 
             <p>
-                O my friend -- but it is too much for my strength -- I sink under the weight of the splendour of these visions!A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and
+                Teszt 2. O my friend -- but it is too much for my strength -- I sink under the weight of the splendour of these visions!A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and
             </p>
 
-            <h2>Cimsor 2 - div tag</h2>
+            <h3>Cimsor3 - div tag</h3>
             <div>
                 <p>
                     Ez egy div eleje.
@@ -212,7 +206,7 @@
             </div>
 
             <hr>
-            <h1 id="idH1Registration">Regisztráció</h1>
+            <h2 id="idH2Registration">Regisztráció</h2>
             <div>
                 <form onsubmit="return confirm('Biztosan elküldi a jelentkezést?')">
                     <div >
@@ -256,10 +250,8 @@
                         <input type="password" name="password" id="passwordInput1" required minlength="5" placeholder="Ide írja a jelszót">
                     </div>
 
-                    <div style="margin-top: 12px;
-                                margin-bottom: 3px;
-                                ">
-                        <input  style="width: auto;"
+                    <div class="acceptPolicy">
+                        <input  class="autoWidht"
                                 type="checkbox" 
                                 name="policyAccepted" 
                                 id="policyAcceptedInput"
@@ -272,7 +264,7 @@
                     <div style="margin-top: 3px;
                                 margin-bottom: 18px;
                                 ">
-                        <input  style="width: auto;"
+                        <input  class="autoWidht"
                                 type="checkbox" 
                                 name="submitNewsletter" 
                                 id="newsletterInput"  >
@@ -286,7 +278,7 @@
 
             
             <hr>
-            <h1 id="idH1SendArcticle">Cikk küldése</h1>
+            <h2 id="idH2SendArcticle">Cikk küldése</h2>
             <div>
                 <form name="formF2">
                     <div>
@@ -325,9 +317,9 @@
 
         </main>
 
-        <footer class="NavigationHorizontal">
-            <nav class="NavigationHorizontal">
-                <a class="NavigationLink" id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
+        <footer >
+            <nav class="menu menuUpAndDown">
+                <a class="navLink" id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
             </nav>
         </footer>   
 

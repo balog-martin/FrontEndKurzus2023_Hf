@@ -1,4 +1,116 @@
 /* ********************************** */
+/* ******** Media queries *********** */
+/*  Mobile first, target width 360px  */
+/* ********************************** */
+
+/* Mobile*/
+@media screen and (max-width: 640px){
+    main{
+        width: 85%;
+        margin: auto;
+    }
+    .HeaderText{
+        width: 300px;
+    }
+    .title{
+        font-size: 28px;       
+    }
+    .subtitle{
+        font-size: 13px;       
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .quoteBox{
+        width: 270px;   
+    }
+    img.centeredLarge{
+        width: 100%;
+        margin: 0;
+    }
+    form > div{
+        width: 300px;
+    }
+}  
+
+/* Desktop*/
+@media screen and (min-width: 641px){
+    main{
+        width: 70%;
+        margin: auto;
+    }
+    div.HeaderBackgroundImage{
+        height: 400px;
+    }
+    .HeaderText{
+        width: 400px;
+    }
+    .title{
+        font-size: 60px;
+    }
+    .subtitle{
+        font-size: 18px;       
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .quoteBox{
+        width: 400px;   
+    }
+    img.centeredLarge{
+        width: 80%;
+    }
+    form > div{
+        width: 400px;
+    }
+} 
+
+/* ********************************** */
+/* ********* Media query *********** */
+/*  Dark mode  */
+/* ********************************** */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: rgb(160, 156, 156);
+        background-color: rgb(24, 24, 24);
+    }
+    span{
+        filter: opacity(0.7);
+        background-color: rgba(255, 0, 0, 0.5) ;
+    }
+    .quoteBox{
+        filter: opacity(0.7);
+        color: rgba(255, 0, 0, 0.5) ;
+    }
+    .menu{
+        background-color: rgb(13, 30, 49);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: rgb(45, 45, 45);
+        background-color: rgba(149, 165, 165, 0.395);
+    }
+    span{
+        filter: brightness(0.5) opacity(0.7);
+        background-color: rgba(255, 0, 0, 0.5) ;
+    }
+    .quoteBox{
+        filter: brightness(0.5) opacity(1);
+        color: rgba(255, 0, 0, 0.5) ;
+    }
+    .menu{
+        background-color: rgba(21, 49 , 82);
+    }
+}
+
+
+
+/* ********************************** */
 /* *************** Global *********** */
 /* ********************************** */
 html{
@@ -8,8 +120,6 @@ html{
 body {
     margin: 0px;
     font-family: Montserrat;
-    color: rgb(45, 45, 45);
-    background-color: rgba(149, 165, 165, 0.395);
 }
 
 /* ********************************** */
@@ -18,7 +128,6 @@ body {
 div.HeaderBackgroundImage
 {
     width: 100vw;
-    height: 600px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -29,14 +138,13 @@ div.HeaderBackgroundImage
 /* Ez a style kell, h közepre kerüljön a szöveg...*/
 div.HeaderText 
 {
+    width: 75vw;
     text-align: center;
-    width: 400px;
     margin: auto;
     padding-top: 40px;
 }
 
 .title{
-    font-size: 60px;
     color: rgb(239, 237, 237);
     filter: brightness(0.98);
     text-shadow: 1px 2px 2px gray;   
@@ -44,14 +152,14 @@ div.HeaderText
 
     margin-block-start: 0px; 
     margin: auto;
-    display:table-cell;
+    display:block;
     vertical-align: middle; 
 }
 
 .subtitle{
-    font-size: 18px;
     filter: brightness(0.90);
     padding-top: 35px;
+    padding-bottom: 12px;
     line-height: 28px;
 }
 
@@ -60,27 +168,46 @@ div.HeaderText
 /* ********************************** */
 /* *********** Navigáció ************ */
 /* ********************************** */
-
-nav.NavigationHorizontal{
-    font-weight: bold;
-    text-shadow: rgb(185, 184, 184);
-    height: 70px;
-    /*background-color: rgba(25, 25, 112, 0.516);*/
-    background-color: rgba(21, 49 , 82);
+/* ------ Minden nav.link -----  */
+a.navLink{
     font-size: 24px;
-    padding-left: 50px;
-    padding-top: 35px;
-}
-
-a.NavigationLink{
-    margin-right: 50px;
-    color: wheat;
+    color: wheat;;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    white-space: nowrap; /* Összeugrashoz. Egysoros marad a link*/
+    text-shadow: rgb(185, 184, 184);
     text-decoration: none;
 }
 
-a.NavigationLink:hover{
+a.navLink:hover{
     background-color: rgba(189, 183, 107, 0.338);
 }
+
+/* ----- Menü közös ------- */
+
+
+.menu ul {
+    appearance: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu li {
+    display: inline;
+}     
+/* ----- Menü fent/lent ------- */
+.menuUpAndDown{
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menuUpAndDown a{
+    display: inline-block;
+    padding: 20px 20px;
+}
+
 
 
 /* ********************************** */
@@ -107,12 +234,8 @@ h4 {
 /* ********************************** */
 /* *********** Szöveg *************** */
 /* ********************************** */
-main{
-    width: 70%;
-    margin: auto;
-}
 
-p {
+p{
     line-height: 34px; /*paragráfuson belül*/
     margin-bottom: 30px; /*paragráfusok között*/
 }
@@ -120,8 +243,6 @@ p {
 span {
     font-weight: bold;
     font-style: italic;
-    filter: brightness(0.5) opacity(0.7);
-    background-color: rgba(255, 0, 0, 0.5) ;
 }
 
 span.HighlightYellow{
@@ -142,12 +263,24 @@ div.ContentTwoColumns {
     position: relative;
     margin: auto;
 }
+.quoteBox{
+    border: 5px solid currentColor;
+    margin: auto;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.quoteAuthor{
+    text-align: right;
+    margin-right: 20px;
+}
 
 /* ********************************** */
 /* ************* Image ************** */
 /* ********************************** */
 img.centeredLarge{
-    width: 500px;
     display: block;
     background-image: url(Backgrounds/majestic-mountain_small.jpg) ;
     background-size: contain;
@@ -156,7 +289,6 @@ img.centeredLarge{
     box-shadow: 5px 5px 10px black;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
 }
 
 figcaption {
@@ -174,8 +306,7 @@ form{
 }
 
 form > div{
-    margin-bottom: 10px;
-    width: 400px;
+    margin-bottom: 10px;   
 }
 
 form > div > label{
@@ -197,4 +328,13 @@ textarea{
     width: 100%;
     resize: vertical;
     min-height: 80px;
+}
+
+.acceptPolicy{
+    margin-top: 12px;
+    margin-bottom: 3px;
+}
+
+.autoWidht{
+    width: auto;
 }
