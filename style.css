@@ -301,6 +301,7 @@ figcaption {
 /* ********************************** */
 /* ********* Form formazasa ********* */
 /* ********************************** */
+/* ----- Saját ------- */
 form{
     margin-bottom: 18px;
 }
@@ -338,3 +339,4 @@ textarea{
 .autoWidht{
     width: auto;
 }
+

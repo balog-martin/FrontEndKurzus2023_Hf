@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> <!-- Bootstrap-Source. "Place the <link> tag in the <head> for our CSS"-->
+
+
         <title>Hf - Balog Martin</title>
 
         <!-- GoogleFont-->
@@ -15,6 +18,8 @@
         <link rel="stylesheet" href="style.css" >
     </head>
     <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> <!-- Bootstrap-Source.  Place the <script> tag for our JavaScript bundle (including Popper for positioning dropdowns, poppers, and tooltips) before the closing </body>.-->
+
         <header>
             <nav class="menu menuUpAndDown">             
                 <a class="navLink" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
@@ -128,8 +133,6 @@
                     <figcaption>Egy hegy képe</figcaption>
                 </figure>
 
-
-
                 <p>
                     But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee
                 </p>
@@ -154,9 +157,6 @@
                 
             <hr>  
                 
-    
-            
-            
         <h2>Cimsor2</h2>
             <h3>Cimsor3</h3>
             <p>
@@ -279,39 +279,38 @@
             
             <hr>
             <h2 id="idH2SendArcticle">Cikk küldése</h2>
-            <div>
-                <form name="formF2">
-                    <div>
-                        <label for="surNameInputF2">Vezetéknév*:</label>
-                        <input type="text" name="surNameF2" id="surNameInputF2" required minlength="1" placeholder="Ide írja be vezetéknevet">
+            <div class="reset">
+                <form  name="formF2" >
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="surNameInputF2">Vezetéknév*:</label>
+                        <input type="text" class="form-control" name="surNameF2" id="surNameInputF2" required minlength="1" placeholder="Ide írja be vezetéknevet">
                     </div>
-                    <div >
-                        <label for="firstNameInputF2">Keresztnév*:</label>
-                        <input type="text" name="firstNameF2" id="firstNameInputF2" required minlength="1" placeholder="Ide írja be keresztnevet">
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="firstNameInputF2">Keresztnév*:</label>
+                        <input type="text" class="form-control" name="firstNameF2" id="firstNameInputF2" required minlength="1" placeholder="Ide írja be keresztnevet">
                     </div>
-                    <div >
-                        <label for="telNrInputF2">Telefonszám:</label>
-                        <input type="tel" name="telNrF2" id="telNrInputF2" placeholder="Ide írja be a telefonszámot">
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="telNrInputF2">Telefonszám:</label>
+                        <input type="tel" class="form-control" name="telNrF2" id="telNrInputF2" placeholder="Ide írja be a telefonszámot">
                     </div>
-                    <div >
-                        <label for="emailInputF2">E-mail cím*:</label>
-                        <input type="email" name="emailF2" id="emailInputF2" 
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="emailInputF2">E-mail cím*:</label>
+                        <input type="email" class="form-control" name="emailF2" id="emailInputF2" 
                                 required minlength="3"
                                 placeholder="Ide írja az e-mailcímet">
                     </div>
-                    <div>
-                        <label for="ageInputF2">Életkor</label>
-                        <input type="number" name="ageF2" id="ageInputF2" placeholder="Ide írja az életkorát" >
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="ageInputF2">Életkor:</label>
+                        <input type="number" class="form-control" name="ageF2" id="ageInputF2" placeholder="Ide írja az életkorát" >
                     </div>
-                    <div>
-                        <label for="messageTextareaF2">Üzenet</label>
-                        <textarea name="messageF2" id="messageTextareaF2"></textarea>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="messageTextareaF2">Üzenet:</label>
+                        <textarea class="form-control" name="messageF2" id="messageTextareaF2"></textarea>
                     </div>
                     <div>
                         <label>*: Kötelezően kitöltendő mező</label>
                     </div>
-                    <button type="submit">Elküld</button>
-
+                    <button class="btn" type="submit">Elküld</button>
                 </form>
             </div>
 
@@ -323,5 +322,8 @@
             </nav>
         </footer>   
 
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> <!-- Bootstrap-Source. -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> <!-- Bootstrap-Source. -->
     </body>
 </html>
