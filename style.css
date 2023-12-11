@@ -103,26 +103,34 @@
     /* Theme 1*/
     --theme1-color: #d34a97;
     --theme1-bg: #f7f7f7;
-    --theme1-text: #222430;
+    --theme1-text: rgb(45, 45, 45);;
     --theme1-highlight-color: yellow;
+    --theme1-nav-bg: rgba(21, 49 , 82);;
+    --theme1-nav-text: wheat;
 
     /* Theme 2*/
     --theme2-color: #683da3;
     --theme2-bg: #686f97;
     --theme2-text: #f7f7f7;
     --theme2-highlight-color: pink;
+    --theme2-nav-bg: rgba(200, 49 , 82);;
+    --theme2-nav-text: rgb(204, 184, 147);
  
     /* Theme 3*/
     --theme3-color: tomato;
     --theme3-bg: #ebc6c6;
     --theme3-text: tomato;
     --theme3-highlight-color: green;
+    --theme3-nav-bg: rgb(200, 48, 21);;
+    --theme3-nav-text: rgb(192, 141, 45);
 
     /* Default mode: Theme 1 */  
     --text-color: var(--theme1-text);
     --bg-color: var(--theme1-bg);
     --theme-color: var(--theme1-color); 
     --highlight-color: var(--theme1-highlight-color);
+    --nav-bg: var(--theme1-nav-bg);
+    --nav-text: var(--theme1-nav-text);
 }
 
 /* Theme 2*/
@@ -131,6 +139,8 @@
     --bg-color: var(--theme2-bg);
     --theme-color: var(--theme2-color); 
     --highlight-color: var(--theme2-highlight-color);
+    --nav-bg: var(--theme2-nav-bg);
+    --nav-text: var(--theme2-nav-text);
 }
   
 /* Theme 3*/
@@ -139,14 +149,23 @@
   --bg-color: var(--theme3-bg);
   --theme-color: var(--theme3-color);
   --highlight-color: var(--theme3-highlight-color);
+  --nav-bg: var(--theme3-nav-bg);
+  --nav-text: var(--theme3-nav-text);
 }
 
-.headerFooter>nav>a, main, .headerFooter>.menu {
-    background: var(--bg-color);
+main{
     color: var(--text-color);
-    min-height: 100%;
-    transition: color .2s, background-color .2s;
+    background: var(--bg-color);
     background-color: var(--bg-color);
+    min-height: 100%;
+    transition: color .2s, color .2s,background-color .2s;
+}
+
+.headerFooter>nav>a, .headerFooter>.menu {
+    color: var(--nav-text);
+    background: var(--nav-bg);
+    background-color: var(--nav-bg);
+    transition: color .2s, background-color .2s;
 }
 
 /* ********************************** */
@@ -171,12 +190,8 @@
     h1, h2, h3, h4, h5, h6{
         color: var(--theme-color);
         text-shadow: 1px 1px 2px gray;
-    }       
-    /*
-    .menu{
-        background-color: rgb(13, 30, 49);
-    }
-    */
+    }         
+  
 }
 
 @media (prefers-color-scheme: light) {
@@ -196,10 +211,7 @@
         color: var(--theme-color);
         text-shadow: 1px 1px 2px gray;
     }         
-    /*
-    .menu{
-        background-color: rgba(21, 49 , 82);
-    }*/
+
 }
 
 /* ********************************** */
