@@ -1,23 +1,27 @@
 :root {
-    /* Theme 1 (red-blue) */
+    /* Theme 1*/
     --theme1-text: #222430;
     --theme1-bg: #f7f7f7;
     --theme1-color: #d34a97;
-  
+    --theme1-highlight-color: yellow;
+
     /* Theme 2*/
     --theme2-text: #f7f7f7;
     --theme2-bg: #222430;
     --theme2-color: #bd93f9;
-  
+    --theme2-highlight-color: pink;
+ 
     /* Theme 3*/
     --theme3-text: tomato;
     --theme3-bg: #f7f7f7;
     --theme3-color: tomato;
-  
+    --theme3-highlight-color: green;
+
     /* Default mode: Theme 1 */  
     --text-color: var(--theme1-text);
     --bg-color: var(--theme1-bg);
     --theme-color: var(--theme1-color); 
+    --highlight-color: var(--theme1-highlight-color);
 }
 
 /* Theme 2*/
@@ -25,6 +29,7 @@
     --text-color: var(--theme2-text);
     --bg-color: var(--theme2-bg);
     --theme-color: var(--theme2-color); 
+    --highlight-color: var(--theme2-highlight-color);
 }
   
 /* Theme 3*/
@@ -32,9 +37,8 @@
   --text-color: var(--theme3-text);
   --bg-color: var(--theme3-bg);
   --theme-color: var(--theme3-color);
+  --highlight-color: var(--theme3-highlight-color);
 }
-
-
 
 .headerFooter>nav>a, main, .headerFooter>.menu {
     background: var(--bg-color);
@@ -55,7 +59,6 @@
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
 } 
-
 .switch-label {
     background: var(--text-color);
     border: 3px solid var(--text-color);
@@ -68,7 +71,6 @@
     padding: 8px 12px;
     transition: box-shadow .2s, border .2s;
 }
-
 .theme-switch:focus + .switch-label, .switch-label:hover {
     box-shadow: 0 0 10px #20f1e7;
     border: 3px solid #20f1e7;
@@ -81,12 +83,11 @@
 /* ********************************** */
 
 /* Mobile*/
-@media screen and (max-width: 640px){
-    /*
+@media screen and (max-width: 640px){   
     article{
         width: 85%;
         margin: auto;
-    }*/
+    }
     .HeaderText{
         width: 300px;
     }
@@ -114,10 +115,10 @@
 
 /* Desktop*/
 @media screen and (min-width: 641px){
-    /*article{
+    article{
         width: 70%;
         margin: auto;
-    }*/
+    }
     div.HeaderBackgroundImage{
         height: 400px;
     }
