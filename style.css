@@ -1,67 +1,66 @@
 :root {
-    /* Light mode */
-    --light-text: #222430;
-    --light-bg: #f7f7f7;
-    --light-theme: #d34a97;
+    /* Theme 1 (red-blue) */
+    --theme1-text: #222430;
+    --theme1-bg: #f7f7f7;
+    --theme1-color: #d34a97;
   
-    /* Dark mode */
-    --dark-text: #f7f7f7;
-    --dark-bg: #222430;
-    --dark-theme: #bd93f9;
+    /* Theme 2*/
+    --theme2-text: #f7f7f7;
+    --theme2-bg: #222430;
+    --theme2-color: #bd93f9;
   
-    /* Tomato mode */
-    --third-text: tomato;
-    --third-bg: #f7f7f7;
-    --third-theme: tomato;
+    /* Theme 3*/
+    --theme3-text: tomato;
+    --theme3-bg: #f7f7f7;
+    --theme3-color: tomato;
   
     /* Default mode */  
-    --text-color: var(--light-text);
-    --bg-color: var(--light-bg);
-    --theme-color: var(--light-theme); 
+    --text-color: var(--theme1-text);
+    --bg-color: var(--theme1-bg);
+    --theme-color: var(--theme1-color); 
 }
 
-/* Dark mode */
+/* Theme 2*/
 .themeSelectContainer:has(#theme-switch2:checked) ~ .headerFooter>nav>a{
-    --text-color: var(--dark-text);
-    --bg-color: var(--dark-bg);
-    --theme-color: var(--dark-theme); 
+    --text-color: var(--theme2-text);
+    --bg-color: var(--theme2-bg);
+    --theme-color: var(--theme2-color); 
 }
   
-/* Tomato mode */
+/* Theme 3*/
 .themeSelectContainer:has(#theme-switch3:checked) ~ .headerFooter>nav>a{
-  --text-color: var(--third-text);
-  --bg-color: var(--third-bg);
-  --theme-color: var(--third-theme);
+  --text-color: var(--theme3-text);
+  --bg-color: var(--theme3-bg);
+  --theme-color: var(--theme3-color);
 }
 
-/* Dark mode */
+/* Theme 2*/
 .themeSelectContainer:has(#theme-switch2:checked) ~ .headerFooter>.menu{
 
-    --text-color: var(--dark-text);
-    --bg-color: var(--dark-bg);
-    --theme-color: var(--dark-theme); 
+    --text-color: var(--theme2-text);
+    --bg-color: var(--theme2-bg);
+    --theme-color: var(--theme2-color); 
 }
   
-/* Tomato mode */
+/* Theme 3*/
 .themeSelectContainer:has(#theme-switch3:checked) ~ .headerFooter>.menu{
-  --text-color: var(--third-text);
-  --bg-color: var(--third-bg);
-  --theme-color: var(--third-theme);
+  --text-color: var(--theme3-text);
+  --bg-color: var(--theme3-bg);
+  --theme-color: var(--theme3-color);
 }
 
-
-/* Dark mode */
+/* Theme 2*/
 .themeSelectContainer:has(#theme-switch2:checked) ~ main{
-    --text-color: var(--dark-text);
-    --bg-color: var(--dark-bg);
-    --theme-color: var(--dark-theme); 
+    --text-color: var(--theme2-text);
+    --bg-color: var(--theme2-bg);
+    --theme-color: var(--theme2-color); 
 }
 
-/* Tomato mode */
+/* Theme 3*/
 .themeSelectContainer:has(#theme-switch3:checked) ~ main{
-  --text-color: var(--third-text);
-  --bg-color: var(--third-bg);
-  --theme-color: var(--third-theme);
+  --text-color: var(--theme3-text);
+  --bg-color: var(--theme3-bg);
+  --theme-color: var(--theme3-color);
 }
 
 
