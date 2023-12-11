@@ -21,28 +21,29 @@
 }
 
 /* Dark mode */
-#theme-switch2:checked ~ #idNavTop>nav>a{
+.themeSelectContainer:has(#theme-switch2:checked) ~ #idNavTop>nav>a{
     --text-color: var(--dark-text);
     --bg-color: var(--dark-bg);
     --theme-color: var(--dark-theme); 
 }
   
 /* Tomato mode */
-#theme-switch3:checked ~ #idNavTop>nav>a{
+.themeSelectContainer:has(#theme-switch3:checked) ~ #idNavTop>nav>a{
   --text-color: var(--third-text);
   --bg-color: var(--third-bg);
   --theme-color: var(--third-theme);
 }
 
+
 /* Dark mode */
-#theme-switch2:checked ~ #page{
+.themeSelectContainer:has(#theme-switch2:checked) ~ #page{
     --text-color: var(--dark-text);
     --bg-color: var(--dark-bg);
     --theme-color: var(--dark-theme); 
 }
-  
+
 /* Tomato mode */
-#theme-switch3:checked ~ #page{
+.themeSelectContainer:has(#theme-switch3:checked)~ #page{
   --text-color: var(--third-text);
   --bg-color: var(--third-bg);
   --theme-color: var(--third-theme);
