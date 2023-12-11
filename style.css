@@ -21,14 +21,14 @@
 }
 
 /* Dark mode */
-.themeSelectContainer:has(#theme-switch2:checked) ~ header>nav>a{
+.themeSelectContainer:has(#theme-switch2:checked) ~ .headerFooter>nav>a{
     --text-color: var(--dark-text);
     --bg-color: var(--dark-bg);
     --theme-color: var(--dark-theme); 
 }
   
 /* Tomato mode */
-.themeSelectContainer:has(#theme-switch3:checked) ~ header>nav>a{
+.themeSelectContainer:has(#theme-switch3:checked) ~ .headerFooter>nav>a{
   --text-color: var(--third-text);
   --bg-color: var(--third-bg);
   --theme-color: var(--third-theme);
@@ -50,7 +50,7 @@
 }
 
 
-#page, header>nav>a {
+#page, .headerFooter>nav>a {
     background: var(--bg-color);
     color: var(--text-color);
     font: normal 125%/1.4 Georgia, 'Times New Roman', Times, serif;
