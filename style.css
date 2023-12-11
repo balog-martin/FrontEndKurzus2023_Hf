@@ -1,3 +1,49 @@
+:root {
+    /* Light mode */
+    --light-text: #222430;
+    --light-bg: #f7f7f7;
+    --light-theme: #d34a97;
+  
+    /* Dark mode */
+    --dark-text: #f7f7f7;
+    --dark-bg: #222430;
+    --dark-theme: #bd93f9;
+  
+    /* Tomato mode */
+    --third-text: tomato;
+    --third-bg: #f7f7f7;
+    --third-theme: tomato;
+  
+    /* Default mode */  
+    --text-color: var(--light-text);
+    --bg-color: var(--light-bg);
+    --theme-color: var(--light-theme); 
+}
+
+/* Dark mode */
+#theme-switch2:checked ~ #page {
+    --text-color: var(--dark-text);
+    --bg-color: var(--dark-bg);
+    --theme-color: var(--dark-theme); 
+}
+  
+/* Tomato mode */
+#theme-switch3:checked ~ #page {
+  --text-color: var(--third-text);
+  --bg-color: var(--third-bg);
+  --theme-color: var(--third-theme);
+}
+
+
+#page {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font: normal 125%/1.4 Georgia, 'Times New Roman', Times, serif;
+    min-height: 100%;
+    transition: color .2s, background-color .2s;
+  }
+
+
 /* ********************************** */
 /* ******** Media queries *********** */
 /*  Mobile first, target width 360px  */
