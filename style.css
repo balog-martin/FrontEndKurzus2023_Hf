@@ -36,7 +36,6 @@
 
 /* Theme 2*/
 .themeSelectContainer:has(#theme-switch2:checked) ~ .headerFooter>.menu{
-
     --text-color: var(--theme2-text);
     --bg-color: var(--theme2-bg);
     --theme-color: var(--theme2-color); 
@@ -63,7 +62,6 @@
   --theme-color: var(--theme3-color);
 }
 
-
 .headerFooter>nav>a, main, .headerFooter>.menu {
     background: var(--bg-color);
     color: var(--text-color);
@@ -73,16 +71,18 @@
     background-color: var(--bg-color);
 }
 
-/* Theme switcher buttons */
+/* ********************************** */
+/* ****** Theme switcher buttons **** */
+/* ********************************** */
 .theme-switch { /* Hides the radio buttons */
     position: absolute !important;
     height: 1px;
     width: 1px;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
-  }
-  
-  .switch-label {
+} 
+
+.switch-label {
     background: var(--text-color);
     border: 3px solid var(--text-color);
     border-radius: 5px;
@@ -93,17 +93,13 @@
     margin: 20px 0 20px 20px;
     padding: 8px 12px;
     transition: box-shadow .2s, border .2s;
-  }
-  
-  .theme-switch:focus + .switch-label,
-  .switch-label:hover {
+}
+
+.theme-switch:focus + .switch-label, .switch-label:hover {
     box-shadow: 0 0 10px #20f1e7;
     border: 3px solid #20f1e7;
     border-radius: 5px;
-  }
-
-
-
+}
 
 /* ********************************** */
 /* ******** Media queries *********** */
@@ -218,8 +214,6 @@
         background-color: rgba(21, 49 , 82);
     }*/
 }
-
-
 
 /* ********************************** */
 /* *************** Global *********** */
