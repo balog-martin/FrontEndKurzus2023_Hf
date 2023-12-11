@@ -34,6 +34,21 @@
   --theme-color: var(--third-theme);
 }
 
+/* Dark mode */
+.themeSelectContainer:has(#theme-switch2:checked) ~ .headerFooter>.menu{
+
+    --text-color: var(--dark-text);
+    --bg-color: var(--dark-bg);
+    --theme-color: var(--dark-theme); 
+}
+  
+/* Tomato mode */
+.themeSelectContainer:has(#theme-switch3:checked) ~ .headerFooter>.menu{
+  --text-color: var(--third-text);
+  --bg-color: var(--third-bg);
+  --theme-color: var(--third-theme);
+}
+
 
 /* Dark mode */
 .themeSelectContainer:has(#theme-switch2:checked) ~ main{
@@ -43,22 +58,21 @@
 }
 
 /* Tomato mode */
-.themeSelectContainer:has(#theme-switch3:checked)~ main{
+.themeSelectContainer:has(#theme-switch3:checked) ~ main{
   --text-color: var(--third-text);
   --bg-color: var(--third-bg);
   --theme-color: var(--third-theme);
 }
 
 
-main, .headerFooter>nav>a {
+.headerFooter>nav>a, main, .headerFooter>.menu {
     background: var(--bg-color);
     color: var(--text-color);
     font: normal 125%/1.4 Georgia, 'Times New Roman', Times, serif;
     min-height: 100%;
     transition: color .2s, background-color .2s;
+    background-color: var(--bg-color);
 }
-
-
 
 /* Theme switcher buttons */
 .theme-switch { /* Hides the radio buttons */
@@ -180,16 +194,18 @@ main, .headerFooter>nav>a {
         filter: opacity(0.7);
         color: rgba(255, 0, 0, 0.5) ;
     }
+    /*
     .menu{
         background-color: rgb(13, 30, 49);
     }
+    */
 }
 
 @media (prefers-color-scheme: light) {
-    body {
+    /*body {
         color: rgb(45, 45, 45);
         background-color: rgba(149, 165, 165, 0.395);
-    }
+    }*/
     span{
         filter: brightness(0.5) opacity(0.7);
         background-color: rgba(255, 0, 0, 0.5) ;
@@ -198,9 +214,10 @@ main, .headerFooter>nav>a {
         filter: brightness(0.5) opacity(1);
         color: rgba(255, 0, 0, 0.5) ;
     }
+    /*
     .menu{
         background-color: rgba(21, 49 , 82);
-    }
+    }*/
 }
 
 
