@@ -14,53 +14,27 @@
     --theme3-bg: #f7f7f7;
     --theme3-color: tomato;
   
-    /* Default mode */  
+    /* Default mode: Theme 1 */  
     --text-color: var(--theme1-text);
     --bg-color: var(--theme1-bg);
     --theme-color: var(--theme1-color); 
 }
 
 /* Theme 2*/
-.themeSelectContainer:has(#theme-switch2:checked) ~ .headerFooter>nav>a{
+.themeSelectContainer:has(#theme-switch2:checked) ~ *{
     --text-color: var(--theme2-text);
     --bg-color: var(--theme2-bg);
     --theme-color: var(--theme2-color); 
 }
   
 /* Theme 3*/
-.themeSelectContainer:has(#theme-switch3:checked) ~ .headerFooter>nav>a{
+.themeSelectContainer:has(#theme-switch3:checked) ~ *{
   --text-color: var(--theme3-text);
   --bg-color: var(--theme3-bg);
   --theme-color: var(--theme3-color);
 }
 
-/* Theme 2*/
-.themeSelectContainer:has(#theme-switch2:checked) ~ .headerFooter>.menu{
-    --text-color: var(--theme2-text);
-    --bg-color: var(--theme2-bg);
-    --theme-color: var(--theme2-color); 
-}
-  
-/* Theme 3*/
-.themeSelectContainer:has(#theme-switch3:checked) ~ .headerFooter>.menu{
-  --text-color: var(--theme3-text);
-  --bg-color: var(--theme3-bg);
-  --theme-color: var(--theme3-color);
-}
 
-/* Theme 2*/
-.themeSelectContainer:has(#theme-switch2:checked) ~ main{
-    --text-color: var(--theme2-text);
-    --bg-color: var(--theme2-bg);
-    --theme-color: var(--theme2-color); 
-}
-
-/* Theme 3*/
-.themeSelectContainer:has(#theme-switch3:checked) ~ main{
-  --text-color: var(--theme3-text);
-  --bg-color: var(--theme3-bg);
-  --theme-color: var(--theme3-color);
-}
 
 .headerFooter>nav>a, main, .headerFooter>.menu {
     background: var(--bg-color);
@@ -180,7 +154,9 @@
     /*article {
         color: rgb(160, 156, 156);
         background-color: rgb(24, 24, 24);
-    }*/
+    }
+    */
+    /*
     span{
         filter: opacity(0.7);
         background-color: rgba(255, 0, 0, 0.5) ;
@@ -189,6 +165,7 @@
         filter: opacity(0.7);
         color: rgba(255, 0, 0, 0.5) ;
     }
+    */
     /*
     .menu{
         background-color: rgb(13, 30, 49);
@@ -201,6 +178,7 @@
         color: rgb(45, 45, 45);
         background-color: rgba(149, 165, 165, 0.395);
     }*/
+    /*
     span{
         filter: brightness(0.5) opacity(0.7);
         background-color: rgba(255, 0, 0, 0.5) ;
@@ -209,6 +187,7 @@
         filter: brightness(0.5) opacity(1);
         color: rgba(255, 0, 0, 0.5) ;
     }
+    */
     /*
     .menu{
         background-color: rgba(21, 49 , 82);
