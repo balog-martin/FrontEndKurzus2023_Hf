@@ -177,8 +177,7 @@ main{
         color: rgb(160, 156, 156);
         background-color: rgb(24, 24, 24);
     }
-    */
-    
+    */ 
     span{
         filter: opacity(0.7);
         background-color: var(--highlight-color);
@@ -190,8 +189,7 @@ main{
     h1, h2, h3, h4, h5, h6{
         color: var(--theme-color);
         text-shadow: 1px 1px 2px gray;
-    }         
-  
+    }          
 }
 
 @media (prefers-color-scheme: light) {
@@ -200,7 +198,7 @@ main{
         background-color: rgba(149, 165, 165, 0.395);
     }*/  
     span{
-        filter: brightness(0.5) opacity(0.7);
+        filter: brightness(0.8) opacity(1);
         background-color: var(--highlight-color);
     }
     .quoteBox{
@@ -313,7 +311,6 @@ a.navLink:hover{
 }
 
 
-
 /* ********************************** */
 /* *********** Headings ************* */
 /* ********************************** */
@@ -345,9 +342,6 @@ span {
     font-style: italic;
 }
 
-span.HighlightYellow{
-    background-color: rgba(246, 255, 0, 0.5) ;
-}
 
 /*  Megyjegyzes: ez a 2 oszlopos elrendezes nem müködik. 
     TODO: miutan tanultunk a felxboxrol, javitani!*/
@@ -371,7 +365,6 @@ div.ContentTwoColumns {
     font-style: italic;
     font-weight: bold;
 }
-
 .quoteAuthor{
     text-align: right;
     margin-right: 20px;
@@ -396,7 +389,7 @@ figcaption {
     font-style: italic;
     margin-top: 15px;
     text-align: center;
-  }
+}
 
 /* ********************************** */
 /* ********* Form formazasa ********* */
