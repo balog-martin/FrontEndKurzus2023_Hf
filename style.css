@@ -255,31 +255,45 @@
 
 #labelTheme1{
     color: var(--theme1-color);
-    background: var(--theme1-nav-bg);
-    border: 3px solid var(--theme1-nav-text);
+    background: var(--theme1-bg);
+    border: 3px solid var(--theme1-nav-bg);
 }
 #labelTheme2{
     color: var(--theme2-color);
-    background: var(--theme2-nav-bg);
-    border: 3px solid var(--theme2-nav-text);
+    background: var(--theme2-bg);
+    border: 3px solid var(--theme2-nav-bg);
 }
 #labelTheme3{
     color: var(--theme3-color);
-    background: var(--theme3-nav-bg);
-    border: 3px solid var(--theme3-nav-text);
+    background: var(--theme3-bg);
+    border: 3px solid var(--theme3-nav-bg);
 }
-#labelThemeSwitcher{  
+.themeSelectContainer > #labelThemeSelect{  
     font-size: 125%;
     margin: 20px 0 20px 20px;
     padding: 11px 12px;
-    color: var(--nav-text);
     font-weight: bold;
-    background-color: var(--nav-bg);
     transition: none;
     font-style: italic;
     border-radius: 5px;
-
+    color: var(--theme1-nav-text); /* Default */
+    background: var(--theme1-nav-bg); /* Default */
 }
+
+/* Theme 2*/
+#theme-switch2:checked ~ #labelThemeSelect{
+    color: var(--theme2-nav-text);
+    background: var(--theme2-nav-bg);
+}
+  
+/* Theme 3*/
+#theme-switch3:checked ~ #labelThemeSelect{
+    color: var(--theme3-nav-text);
+    background: var(--theme3-nav-bg);
+}
+
+
+
 
 /* ********************************** */
 /* *************** Global *********** */
