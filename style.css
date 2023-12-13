@@ -109,29 +109,29 @@
     --theme1-nav-text: wheat;
 
     /* Theme 2*/
-    --theme2-color: #683da3;
+    --theme2-color: #6532ac;
     --theme2-bg: #686f97;
     --theme2-text: #f7f7f7;
-    --theme2-highlight-color: pink;
+    --theme2-highlight-color: rgb(252, 164, 178);
     --theme2-nav-bg: rgba(200, 49 , 82);;
     --theme2-nav-text: rgb(204, 184, 147);
  
     /* Theme 3*/
     --theme3-color: tomato;
-    --theme3-bg: #ebc6c6;
+    --theme3-bg: #e9cccc;
     --theme3-text: tomato;
-    --theme3-highlight-color: green;
+    --theme3-highlight-color: rgba(252, 224, 103, 0.836);
     --theme3-nav-bg: rgb(200, 48, 21);;
     --theme3-nav-text: rgb(192, 141, 45);
 
-    /* Dark */
+    /* Dark (only background and text color change in each theme!)*/
     --dark-bg-color: #333333;
     --dark-text-color: rgb(216, 216, 216);
 
     /* Default mode: Theme 1 */  
-    --text-color: var(--theme1-text);
-    --bg-color: var(--theme1-bg);
     --theme-color: var(--theme1-color); 
+    --bg-color: var(--theme1-bg);
+    --text-color: var(--theme1-text);
     --highlight-color: var(--theme1-highlight-color);
     --nav-bg: var(--theme1-nav-bg);
     --nav-text: var(--theme1-nav-text);
@@ -157,12 +157,10 @@
   --nav-text: var(--theme3-nav-text);
 }
 
-
 /* ********************************** */
 /* ********* Media query ************ */
 /* ******* Light/Dark mode ********** */
 /* ********************************** */
-
 @media (prefers-color-scheme: light) {
     main{
         color: var(--text-color);
@@ -177,15 +175,11 @@
         background: var(--nav-bg);
         background-color: var(--nav-bg);
         transition: color .2s, background-color .2s;
-    }
-    
-    /*body {
-        color: rgb(45, 45, 45);
-        background-color: rgba(149, 165, 165, 0.395);
-    }*/  
+    }   
     span{
         filter: brightness(0.8) opacity(1);
         background-color: var(--highlight-color);
+        color: var(--text-color);
     }
     .quoteBox{
         filter: brightness(0.5) opacity(1);
@@ -193,10 +187,9 @@
     }
     h1, h2, h3, h4, h5, h6{
         color: var(--theme-color);
-        text-shadow: 1px 1px 2px gray;
+        text-shadow: 1px 1px 4px gray;
     }         
 }
-
 
 @media (prefers-color-scheme: dark) {
     main{
@@ -205,23 +198,17 @@
         background-color: var(--dark-bg-color);
         min-height: 100%;
         transition: color .2s, color .2s,background-color .2s;
-    }
-    
+    }    
     .headerFooter>nav>a, .headerFooter>.menu {
         color: var(--nav-text);
         background: var(--nav-bg);
         background-color: var(--nav-bg);
         transition: color .2s, background-color .2s;
     }
-
-    /*article {
-        color: rgb(160, 156, 156);
-        background-color: rgb(24, 24, 24);
-    }
-    */ 
     span{
         filter: opacity(0.7);
         background-color: var(--highlight-color);
+        color: var(--dark-bg-color);
     }
     .quoteBox{
         filter: opacity(0.7);
@@ -232,12 +219,6 @@
         text-shadow: none;
     }          
 }
-
-
-
-
-
-
 
 /* ********************************** */
 /* *************** Global *********** */
@@ -341,7 +322,6 @@ a.navLink:hover{
 /* ********************************** */
 /* *********** Headings ************* */
 /* ********************************** */
-
 h1 {               
     filter: brightness(1);
 }
@@ -386,7 +366,9 @@ div.ContentTwoColumns {
 }
 .quoteBox{
     border: 5px solid currentColor;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
     text-align: center;
     padding: 10px 10px 10px 10px;
     font-style: italic;
