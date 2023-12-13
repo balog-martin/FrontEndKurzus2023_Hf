@@ -68,33 +68,7 @@
     }
 } 
 
-/* ********************************** */
-/* ****** Theme switcher buttons **** */
-/* ********************************** */
-.theme-switch { /* Hides the radio buttons */
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-} 
-.switch-label {
-    background: var(--text-color);
-    border: 3px solid var(--text-color);
-    border-radius: 5px;
-    color: var(--bg-color);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 125%;
-    margin: 20px 0 20px 20px;
-    padding: 8px 12px;
-    transition: box-shadow .2s, border .2s;
-}
-.theme-switch:focus + .switch-label, .switch-label:hover {
-    box-shadow: 0 0 10px #20f1e7;
-    border: 3px solid #20f1e7;
-    border-radius: 5px;
-}
+
 
 /* ********************************** */
 /* ******* Theme definitions ******** */
@@ -103,9 +77,9 @@
     /* Theme 1*/
     --theme1-color: #d34a97;
     --theme1-bg: #f7f7f7;
-    --theme1-text: rgb(45, 45, 45);;
+    --theme1-text: rgb(45, 45, 45);
     --theme1-highlight-color: yellow;
-    --theme1-nav-bg: rgba(21, 49 , 82);;
+    --theme1-nav-bg: rgba(21, 49 , 82);
     --theme1-nav-text: wheat;
 
     /* Theme 2*/
@@ -113,7 +87,7 @@
     --theme2-bg: #686f97;
     --theme2-text: #f7f7f7;
     --theme2-highlight-color: rgb(252, 164, 178);
-    --theme2-nav-bg: rgba(200, 49 , 82);;
+    --theme2-nav-bg: rgba(200, 49 , 82);
     --theme2-nav-text: rgb(204, 184, 147);
  
     /* Theme 3*/
@@ -121,7 +95,7 @@
     --theme3-bg: #e9cccc;
     --theme3-text: tomato;
     --theme3-highlight-color: rgba(252, 224, 103, 0.836);
-    --theme3-nav-bg: rgb(200, 48, 21);;
+    --theme3-nav-bg: rgb(200, 48, 21);
     --theme3-nav-text: rgb(192, 141, 45);
 
     /* Dark (only background and text color change in each theme!)*/
@@ -149,12 +123,12 @@
   
 /* Theme 3*/
 .themeSelectContainer:has(#theme-switch3:checked) ~ *{
-  --text-color: var(--theme3-text);
-  --bg-color: var(--theme3-bg);
-  --theme-color: var(--theme3-color);
-  --highlight-color: var(--theme3-highlight-color);
-  --nav-bg: var(--theme3-nav-bg);
-  --nav-text: var(--theme3-nav-text);
+    --text-color: var(--theme3-text);
+    --bg-color: var(--theme3-bg);
+    --theme-color: var(--theme3-color);
+    --highlight-color: var(--theme3-highlight-color);
+    --nav-bg: var(--theme3-nav-bg);
+    --nav-text: var(--theme3-nav-text);
 }
 
 /* ********************************** */
@@ -182,8 +156,8 @@
         color: var(--text-color);
     }
     .quoteBox{
-        filter: brightness(0.5) opacity(1);
-        color: var(--highlight-color);
+        filter: brightness(0.9) opacity(1);
+        color: var(--theme-color);
     }
     h1, h2, h3, h4, h5, h6{
         color: var(--theme-color);
@@ -211,7 +185,7 @@
         color: var(--dark-bg-color);
     }
     .quoteBox{
-        filter: opacity(0.7);
+        filter: opacity(1);
         color: var(--theme-color);
     }
     h1, h2, h3, h4, h5, h6{
@@ -221,22 +195,110 @@
 }
 
 /* ********************************** */
+/* ****** Theme switcher buttons **** */
+/* ********************************** */
+.themeSelectContainer
+{
+    display: flex;
+    justify-content: flex-end;
+    background: transparent;
+    position: fixed; /*ez azt jelenti, h mozogni fog a scrollal*/
+    top: 20px;
+    right: 0px;
+    margin-right: 50px;
+    overflow: hidden; /* Összeugrashoz. Akarmi log ki, azt vagja le. Ehhez meg az a:any-link -nel a "white-space: nowrap" erteket hasznaltuk*/
+    width: 80px; /* Összeugrashoz. */
+    transition: all 200ms;
+    z-index: 10;
+}
+.themeSelectContainer a{
+    display: block;
+    padding: 20px;
+}
+.themeSelectContainer:hover{
+    width: 280px; /*Összeugrashoz*/
+}
+.themeSelectContainer span.ext{
+    display: none;
+}
+.themeSelectContainer:hover span.ext{
+    display: block;
+}
+.themeSelectContainer li {
+    display: block;
+}    
+
+.theme-switch { /* Hides the radio buttons */
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+} 
+.switch-label {
+    background: var(--theme-color);
+    border: 3px solid var(--text-color);
+    border-radius: 5px;
+    color: var(--nav-text);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 125%;
+    margin: 20px 0 20px 20px;
+    padding: 8px 12px;
+    transition: box-shadow .2s, border .2s;
+}
+.theme-switch:focus + .switch-label, .switch-label:hover {
+    box-shadow: 0 0 10px #20f1e7;
+    border: 3px solid #20f1e7;
+    border-radius: 5px;
+}
+
+#labelTheme1{
+    color: var(--theme1-color);
+    background: var(--theme1-nav-bg);
+    border: 3px solid var(--theme1-nav-text);
+}
+#labelTheme2{
+    color: var(--theme2-color);
+    background: var(--theme2-nav-bg);
+    border: 3px solid var(--theme2-nav-text);
+}
+#labelTheme3{
+    color: var(--theme3-color);
+    background: var(--theme3-nav-bg);
+    border: 3px solid var(--theme3-nav-text);
+}
+#labelThemeSwitcher{  
+    font-size: 125%;
+    margin: 20px 0 20px 20px;
+    padding: 11px 12px;
+    color: var(--nav-text);
+    font-weight: bold;
+    background-color: var(--nav-bg);
+    transition: none;
+    font-style: italic;
+    border-radius: 5px;
+
+}
+
+/* ********************************** */
 /* *************** Global *********** */
 /* ********************************** */
 html{
     scroll-behavior: smooth;
 }
-
 body {
     margin: 0px;
     font-family: Montserrat;
+}
+main{
+    padding-top: 30px;
 }
 
 /* ********************************** */
 /* ************ Header ************** */
 /* ********************************** */
-div.HeaderBackgroundImage
-{
+div.HeaderBackgroundImage{
     width: 100vw;
     background-size: cover;
     background-position: center center;
@@ -244,16 +306,12 @@ div.HeaderBackgroundImage
     background-image: url(Backgrounds/beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky.jpg);
     vertical-align: middle;
 }
-
-/* Ez a style kell, h közepre kerüljön a szöveg...*/
-div.HeaderText 
-{
+div.HeaderText { /* Ez a style kell, h közepre kerüljön a szöveg...*/
     width: 75vw;
     text-align: center;
     margin: auto;
     padding-top: 40px;
 }
-
 .title{
     color: rgb(239, 237, 237);
     filter: brightness(0.98);
@@ -265,7 +323,6 @@ div.HeaderText
     display:block;
     vertical-align: middle; 
 }
-
 .subtitle{
     filter: brightness(0.90);
     padding-top: 35px;
@@ -273,51 +330,47 @@ div.HeaderText
     line-height: 28px;
 }
 
-
-
 /* ********************************** */
 /* *********** Navigáció ************ */
 /* ********************************** */
+
 /* ------ Minden nav.link -----  */
 a.navLink{
     font-size: 24px;
-    /*color: wheat;*/
     text-decoration: none;
     letter-spacing: 1px;
     font-weight: bold;
     white-space: nowrap; /* Összeugrashoz. Egysoros marad a link*/
-    /*text-shadow: rgb(185, 184, 184);*/
     text-decoration: none;
 }
-
 a.navLink:hover{
-    /*background-color: rgba(189, 183, 107, 0.338);*/
+    background-color: rgba(var(--nav-text), 0.5); /* Ez miert nem müködik?!*/
+    opacity: 0.7;  /* Mivel az elözö nem müködik, kenytelen vagyok ezt hasznalni..*/
 }
 
 /* ----- Menü közös ------- */
-
-
 .menu ul {
     appearance: none;
     padding: 0px;
     margin: 0px;
 }
-
 .menu li {
     display: inline;
 }     
+
 /* ----- Menü fent/lent ------- */
 .menuUpAndDown{
     padding-left: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
 .menuUpAndDown a{
     display: inline-block;
     padding: 20px 20px;
 }
 
+/* ----- Menü float ------- */
+/* TODO */
 
 /* ********************************** */
 /* *********** Headings ************* */
@@ -338,31 +391,13 @@ h4 {
 /* ********************************** */
 /* *********** Szöveg *************** */
 /* ********************************** */
-
 p{
     line-height: 34px; /*paragráfuson belül*/
     margin-bottom: 30px; /*paragráfusok között*/
 }
-
 span {
     font-weight: bold;
     font-style: italic;
-}
-
-
-/*  Megyjegyzes: ez a 2 oszlopos elrendezes nem müködik. 
-    TODO: miutan tanultunk a felxboxrol, javitani!*/
-div.TwoColumns{
-    margin: auto;
-    display: inline;
-    box-sizing: border-box;
-}
-
-div.ContentTwoColumns {
-    width: 40%;
-    display: inline;
-    position: relative;
-    margin: auto;
 }
 .quoteBox{
     border: 5px solid currentColor;
@@ -379,6 +414,21 @@ div.ContentTwoColumns {
     margin-right: 20px;
 }
 
+/*  Megyjegyzes: ez a 2 oszlopos elrendezes nem müködik. 
+    TODO: miutan tanultunk a felxboxrol, javitani!*/
+div.TwoColumns{
+    margin: auto;
+    display: inline;
+    box-sizing: border-box;
+}
+
+div.ContentTwoColumns {
+    width: 40%;
+    display: inline;
+    position: relative;
+    margin: auto;
+}
+
 /* ********************************** */
 /* ************* Image ************** */
 /* ********************************** */
@@ -392,7 +442,6 @@ img.centeredLarge{
     margin-left: auto;
     margin-right: auto;
 }
-
 figcaption {
     color: rgb(101, 101, 101);
     font-style: italic;
@@ -407,11 +456,9 @@ figcaption {
 form{
     margin-bottom: 18px;
 }
-
 form > div{
     margin-bottom: 10px;   
 }
-
 form > div > label{
     font-size: 12px;
     white-space: nowrap;
@@ -421,23 +468,19 @@ form > div > label{
 form > div > input{
     width: 100%;
 }
-
 button{
     width: 100px;
     height: 30px;
 }
-
 textarea{
     width: 100%;
     resize: vertical;
     min-height: 80px;
 }
-
 .acceptPolicy{
     margin-top: 12px;
     margin-bottom: 3px;
 }
-
 .autoWidht{
     width: auto;
 }
