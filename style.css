@@ -203,14 +203,15 @@
     justify-content: flex-end;
     background: transparent;
     position: fixed; /*ez azt jelenti, h mozogni fog a scrollal*/
-    top: 20px;
+    top: 0px;
     right: 0px;
-    margin-right: 50px;
+    margin-right: 20px;
     overflow: hidden; /* Összeugrashoz. Akarmi log ki, azt vagja le. Ehhez meg az a:any-link -nel a "white-space: nowrap" erteket hasznaltuk*/
-    width: 80px; /* Összeugrashoz. */
+    width: 85px; /* Összeugrashoz. */
     transition: all 200ms;
     z-index: 10;
 }
+
 .themeSelectContainer a{
     display: block;
     padding: 20px;
@@ -278,18 +279,21 @@
     border-radius: 5px;
     color: var(--theme1-nav-text); /* Default */
     background: var(--theme1-nav-bg); /* Default */
+    border: solid 1px var(--theme1-nav-text);
 }
 
 /* Theme 2*/
 #theme-switch2:checked ~ #labelThemeSelect{
     color: var(--theme2-nav-text);
     background: var(--theme2-nav-bg);
+    border: solid 1px var(--theme2-nav-text);
 }
   
 /* Theme 3*/
 #theme-switch3:checked ~ #labelThemeSelect{
     color: var(--theme3-nav-text);
     background: var(--theme3-nav-bg);
+    border: solid 1px var(--theme3-nav-text);
 }
 
 
@@ -307,6 +311,9 @@ body {
 }
 main{
     padding-top: 30px;
+    padding-bottom: 30px;
+
+    margin-bottom: 0px;
 }
 
 /* ********************************** */
@@ -482,7 +489,7 @@ form > div > label{
 form > div > input{
     width: 100%;
 }
-button{
+.customButton{
     width: 100px;
     height: 30px;
 }
