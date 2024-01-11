@@ -14,4 +14,3 @@ function updateReadTime()
 }
 
 updateReadTime();
-calcReadTime();
