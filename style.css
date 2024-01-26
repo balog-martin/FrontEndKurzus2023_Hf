@@ -520,10 +520,14 @@ textarea{
     list-style-type: none;
 }
 
-.authorGridParent{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+.authorTable{
+    margin-left: 30px;
 }
-.authorGridChild{
-    
+
+.authorTableHeader{
+    width: 100px;
+}
+
+.authorTableData{
+    font-style: italic;
 }

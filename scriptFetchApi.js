@@ -11,7 +11,7 @@ async function addUserInfoToArticle(user)
     h2.innerHTML += "Szerző";
     divAuthor.prepend(h2);
 
-    // Add info into unsorted list
+    // ***** Add info into unsorted list *****
     let ul = document.querySelector('#idAuthorUnsortedList');
     addAuthorInfoToUnorderedList(ul, "Név",    user.name, false);
     addAuthorInfoToUnorderedList(ul, "Email",  user.email, true);
@@ -19,13 +19,12 @@ async function addUserInfoToArticle(user)
     addAuthorInfoToUnorderedList(ul, "Cégnév", user.company.name, false);
     ul.classList.add("authorInfo");
 
-    // Add info into table
+    // ***** Add info into table *****
     let table = document.querySelector('#idTableAuthor');
     addAuthorInfoToTable(table, "Név",    user.name, false);
     addAuthorInfoToTable(table, "Email",  user.email, true);
     addAuthorInfoToTable(table, "Tel.",   user.phone, false);
     addAuthorInfoToTable(table, "Cégnév", user.company.name, false);
-
 }
 
 function addAuthorInfoToUnorderedList(ul, tagListItem, contentListItem, isEmail)
@@ -55,7 +54,8 @@ function addAuthorInfoToTable(table, header, content, isEmail)
     let th = document.createElement('th'); // table header
     let td = document.createElement('td'); // table data
 
-    th.appendChild(document.createTextNode(header));
+    th.appendChild(document.createTextNode(header + ":"));
+    th.classList.add("authorTableHeader");
 
     if(isEmail)
     {
@@ -69,6 +69,7 @@ function addAuthorInfoToTable(table, header, content, isEmail)
         td.appendChild(document.createTextNode(content));
     }
 
+    td.classList.add("authorTableData");
     tr.appendChild(th);
     tr.appendChild(td);
     table.appendChild(tr);
