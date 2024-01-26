@@ -28,14 +28,17 @@ function addListItemToUnorderedList(ul, tagListItem, contentListItem, isEmail)
     {
         let link = document.createElement("a");
         link.setAttribute("href", "mailto:" + contentListItem);
-        link.appendChild(document.createTextNode(tagListItem + ": " + contentListItem));
-        ul.appendChild(link);
+        link.appendChild(document.createTextNode(contentListItem));
+        
+        li.appendChild(document.createTextNode(tagListItem + ": "));
+        li.appendChild(link);
     }
     else
     {
         li.appendChild(document.createTextNode(tagListItem + ": " + contentListItem));
-        ul.appendChild(li);
     }
+
+    ul.appendChild(li);
 }
 
 getUsers().then(users => addUserInfoToArticle(users[Math.floor(Math.random() * 10)]));
