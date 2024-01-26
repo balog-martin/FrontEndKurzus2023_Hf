@@ -4,7 +4,7 @@ async function getUsers(callNr) {
     return users;
 }
 
-async function addUserInfoToArticle(user)
+function addUserInfoToArticle(user)
 {
     let divAuthor = document.querySelector("#idAuthor");
     let h2 = document.createElement('h2');
@@ -12,12 +12,12 @@ async function addUserInfoToArticle(user)
     divAuthor.prepend(h2);
 
     // ***** Add info into unsorted list *****
-    let ul = document.querySelector('#idAuthorUnsortedList');
-    addAuthorInfoToUnorderedList(ul, "Név",    user.name, false);
-    addAuthorInfoToUnorderedList(ul, "Email",  user.email, true);
-    addAuthorInfoToUnorderedList(ul, "Tel.",   user.phone, false);
-    addAuthorInfoToUnorderedList(ul, "Cégnév", user.company.name, false);
-    ul.classList.add("authorInfo");
+    //let ul = document.querySelector('#idAuthorUnsortedList');
+    //addAuthorInfoToUnorderedList(ul, "Név",    user.name, false);
+    //addAuthorInfoToUnorderedList(ul, "Email",  user.email, true);
+    //addAuthorInfoToUnorderedList(ul, "Tel.",   user.phone, false);
+    //addAuthorInfoToUnorderedList(ul, "Cégnév", user.company.name, false);
+    //ul.classList.add("authorInfo");
 
     // ***** Add info into table *****
     let table = document.querySelector('#idTableAuthor');
