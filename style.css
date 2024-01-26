@@ -513,3 +513,17 @@ textarea{
     background-color: coral;
 }
 
+/* ********************************** */
+/* ************** Szerzö ************ */
+/* ********************************** */
+.authorInfo{
+    list-style-type: none;
+}
+
+.authorGridParent{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.authorGridChild{
+    
+}
