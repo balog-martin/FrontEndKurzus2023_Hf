@@ -148,11 +148,9 @@
                             mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
                         </p>
     
-                        <figure>
-                            <img    src="Backgrounds/majestic-mountain_small.jpg"
-                                    alt="Hight mountain and sunset"
-                                    class="centeredLarge">   
-                            <figcaption>Egy hegy képe</figcaption>
+                        <figure role="img" aria-labelledby="idImageMountain"> <!-- Kell ezt ennyire tulmagyarazni? Ha az <img> alapbol figure-ben van, raadasul figcaption-t es alt-ot is hasznaltam, kell meg eza role es aria-labelledby attributum?-->
+                            <img src="Backgrounds/majestic-mountain_small.jpg" alt="Hight mountain and sunset" class="centeredLarge">   
+                            <figcaption id="idImageMountain">Egy hegy képe</figcaption>
                         </figure>
     
                         <p>
