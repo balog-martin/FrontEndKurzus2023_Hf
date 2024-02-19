@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -7,7 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> <!-- Bootstrap-Source. "Place the <link> tag in the <head> for our CSS"-->
 
 
-        <title>Hf - Balog Martin</title>
+        <title aria-label="Balog Martin frontendes házi feladata">Hf - Balog Martin</title>
 
         <!-- GoogleFont-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,32 +23,32 @@
     <body >
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> <!-- Bootstrap-Source.  Place the <script> tag for our JavaScript bundle (including Popper for positioning dropdowns, poppers, and tooltips) before the closing </body>.-->
         
-        <div class="themeSelectContainer">            
-            <input type="radio" class="theme-switch" name="theme-switch" id="theme-switch1">
+        <div class="themeSelectContainer" aria-label="Téma választó">            
+            <input type="radio" class="theme-switch" name="theme-switch" id="theme-switch1" aria-label="Egyes téma kiválasztása" role="button"> <!-- A HTML validator ERROR-t dob, ha itt a role="button" szerepel: Bad value 'radio' for attribute 'type' on element 'input'. Marpedig szerintem ebben a specialis esetben a radio-input button role-ban van. Mi ilyenkor a teendö? :) -->
             <label id="labelTheme1" for="theme-switch1" class="switch-label">1</label>
             
-            <input type="radio" class="theme-switch" name="theme-switch" id="theme-switch2">
+            <input type="radio" class="theme-switch" name="theme-switch" id="theme-switch2" aria-label="Kettes téma kiválasztása" role="button">
             <label id="labelTheme2" for="theme-switch2" class="switch-label">2</label>
             
-            <input type="radio" class="theme-switch" name="theme-switch" id="theme-switch3">
+            <input type="radio" class="theme-switch" name="theme-switch" id="theme-switch3" aria-label="Hármas téma kiválasztása" role="button">
             <label id="labelTheme3" for="theme-switch3" class="switch-label">3</label>
 
             <label id="labelThemeSelect" class="labelThemeSwitcher">Skin</label>     <!--TODO: ikont berakni a helyere-->
         </div>
 
         <div>
-            <div>Olvasási idő: <span id="idReadTimeValue" class=""></span> perc</div>      
-            <input id="idSearchInput" type="text">
+            <div aria-label="Olvasási idő">Olvasási idő: <span id="idReadTimeValue" class=""></span> perc</div>      
+            <input id="idSearchInput" type="text" aria-label="Keresés az oldalon" role="searchbox">
         </div>
 
         <header id="idNavTop" class="headerFooter">
-            <nav class="menu menuUpAndDown" >             
-                <a class="navLink" id="anchorID1" href="#anchorID2">Ugrás az oldal aljára</a>
-                <a class="navLink" id="anchorIDRegistration" href="#idH2Registration">Regisztráció</a>
-                <a class="navLink" id="anchorIDSendArticle" href="#idH2SendArcticle">Cikk küldése</a>    
-                <a class="navLink" id="anchorIDSecondPage" href="Page1.html">Masik oldal</a>    
-                <a class="navLink" id="anchorIDGitHub" href="https://github.com/" target="_blank" >GitHub</a>    
-                <a class="navLink" id="anchorIDRobotdreams" href="https://robotdreams.hu/" target="_blank" >Robotdreams</a>    
+            <nav class="menu menuUpAndDown" aria-label="Navigáció a weboldalon belül és más weboldalakra" role="navigation">             
+                <a class="navLink" id="anchorID1" href="#anchorID2" aria-label="Ugrás az oldal aljára" role="button">Ugrás az oldal aljára</a>
+                <a class="navLink" id="anchorIDRegistration" href="#idH2Registration" aria-label="Ugrás a Regisztráció űrlaphoz" role="button">Regisztráció</a>
+                <a class="navLink" id="anchorIDSendArticle" href="#idH2SendArcticle" aria-label="Ugrás a Cikk küldése űrlaphoz" role="button">Cikk küldése</a>    
+                <a class="navLink" id="anchorIDSecondPage" href="Page1.html" aria-label="Ugrás a weblap következő oldalára" role="button">Masik oldal</a>    
+                <a class="navLink" id="anchorIDGitHub" href="https://github.com/" aria-label="A GitHub weboldala" target="_blank" role="button">GitHub</a>    
+                <a class="navLink" id="anchorIDRobotdreams" href="https://robotdreams.hu/" aria-label="A Robotdreams weboldala" target="_blank" role="button">Robotdreams</a>    
              </nav>
     
             <div class="HeaderBackgroundImage">  
@@ -148,11 +148,9 @@
                             mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
                         </p>
     
-                        <figure>
-                            <img    src="Backgrounds/majestic-mountain_small.jpg"
-                                    alt="Hight mountain and sunset"
-                                    class="centeredLarge">   
-                            <figcaption>Egy hegy képe</figcaption>
+                        <figure aria-labelledby="idImageMountain"> <!-- Kell ezt ennyire tulmagyarazni? Ha az <img> alapbol figure-ben van, raadasul figcaption-t es alt-ot is hasznaltam, kell meg ez az aria-labelledby attributum? (Megjegyzes: A HTML validator szolt, hogy a role="img" ide nem kell)-->
+                            <img src="Backgrounds/majestic-mountain_small.jpg" alt="Hight mountain and sunset" class="centeredLarge">   
+                            <figcaption id="idImageMountain">Egy hegy képe</figcaption>
                         </figure>
     
                         <p>
@@ -301,37 +299,35 @@
                     <hr>
                     <h2 id="idH2SendArcticle">Cikk küldése</h2>
                     <div class="reset">
-                        <form  name="formF2" >
+                        <form name="formF2" aria-labelledby="idH2SendArcticle">
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="surNameInputF2">Vezetéknév*:</label>
-                                <input type="text" class="form-control" name="surNameF2" id="surNameInputF2" required minlength="1" placeholder="Ide írja be vezetéknevet">
+                                <label class="input-group-text" for="surNameInputF2" id="labelSurname">Vezetéknév*:</label>
+                                <input type="text" class="form-control" name="surNameF2" id="surNameInputF2" required minlength="1" placeholder="Ide írja be vezetéknevet" aria-labelledby="labelSurname">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="firstNameInputF2">Keresztnév*:</label>
-                                <input type="text" class="form-control" name="firstNameF2" id="firstNameInputF2" required minlength="1" placeholder="Ide írja be keresztnevet">
+                                <label class="input-group-text" for="firstNameInputF2" id="labelFirstname">Keresztnév*:</label>
+                                <input type="text" class="form-control" name="firstNameF2" id="firstNameInputF2" required minlength="1" placeholder="Ide írja be keresztnevet" aria-labelledby="labelFirstname">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="telNrInputF2">Telefonszám:</label>
-                                <input type="tel" class="form-control" name="telNrF2" id="telNrInputF2" placeholder="Ide írja be a telefonszámot">
+                                <label class="input-group-text" for="telNrInputF2" id="labelPhone">Telefonszám:</label>
+                                <input type="tel" class="form-control" name="telNrF2" id="telNrInputF2" placeholder="Ide írja be a telefonszámot" aria-labelledby="labelPhone">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="emailInputF2">E-mail cím*:</label>
-                                <input type="email" class="form-control" name="emailF2" id="emailInputF2" 
-                                        required minlength="3"
-                                        placeholder="Ide írja az e-mailcímet">
+                                <label class="input-group-text" for="emailInputF2" id="labelEmail">E-mail cím*:</label>
+                                <input type="email" class="form-control" name="emailF2" id="emailInputF2" required minlength="3" placeholder="Ide írja az e-mailcímet" aria-labelledby="labelEmail">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="ageInputF2">Életkor:</label>
-                                <input type="number" class="form-control" name="ageF2" id="ageInputF2" placeholder="Ide írja az életkorát" >
+                                <label class="input-group-text" for="ageInputF2" id="labelAge">Életkor:</label>
+                                <input type="number" class="form-control" name="ageF2" id="ageInputF2" placeholder="Ide írja az életkorát" aria-labelledby="labelAge">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="messageTextareaF2">Üzenet:</label>
-                                <textarea class="form-control" name="messageF2" id="messageTextareaF2"></textarea>
+                                <label class="input-group-text" for="messageTextareaF2" id="labelMessage">Üzenet:</label>
+                                <textarea class="form-control" name="messageF2" id="messageTextareaF2" aria-labelledby="labelMessage"></textarea>
                             </div>
                             <div>
                                 <label>*: Kötelezően kitöltendő mező</label>
                             </div>
-                            <button class="btn btn-primary" type="submit">Elküld</button><!--"btn" es "btn-primary" Bootstrap classok-->
+                            <button class="btn btn-primary" type="submit" aria-label="Cikk elküldése" >Elküld</button><!--"btn" es "btn-primary" Bootstrap classok-->
                         </form>
                     </div>
                  
@@ -358,8 +354,8 @@
         </main>
 
         <footer class="headerFooter">
-            <nav class="menu menuUpAndDown">
-                <a class="navLink" id="anchorID2" href="#anchorID1">Ugrás az oldal tetejére</a>
+            <nav class="menu menuUpAndDown" aria-label="Navigáció a weboldalon belül" role="navigation">
+                <a class="navLink" id="anchorID2" href="#anchorID1" aria-label="Ugrás az oldal tetejére" role="button">Ugrás az oldal tetejére</a>
             </nav>
         </footer>   
 
