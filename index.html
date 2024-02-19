@@ -301,37 +301,35 @@
                     <hr>
                     <h2 id="idH2SendArcticle">Cikk küldése</h2>
                     <div class="reset">
-                        <form  name="formF2" >
+                        <form name="formF2" aria-labelledby="idH2SendArcticle">
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="surNameInputF2">Vezetéknév*:</label>
-                                <input type="text" class="form-control" name="surNameF2" id="surNameInputF2" required minlength="1" placeholder="Ide írja be vezetéknevet">
+                                <label class="input-group-text" for="surNameInputF2" id="labelSurname">Vezetéknév*:</label>
+                                <input type="text" class="form-control" name="surNameF2" id="surNameInputF2" required minlength="1" placeholder="Ide írja be vezetéknevet" aria-labelledby="labelSurname">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="firstNameInputF2">Keresztnév*:</label>
-                                <input type="text" class="form-control" name="firstNameF2" id="firstNameInputF2" required minlength="1" placeholder="Ide írja be keresztnevet">
+                                <label class="input-group-text" for="firstNameInputF2" id="labelFirstname">Keresztnév*:</label>
+                                <input type="text" class="form-control" name="firstNameF2" id="firstNameInputF2" required minlength="1" placeholder="Ide írja be keresztnevet" aria-labelledby="labelFirstname">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="telNrInputF2">Telefonszám:</label>
-                                <input type="tel" class="form-control" name="telNrF2" id="telNrInputF2" placeholder="Ide írja be a telefonszámot">
+                                <label class="input-group-text" for="telNrInputF2" id="labelPhone">Telefonszám:</label>
+                                <input type="tel" class="form-control" name="telNrF2" id="telNrInputF2" placeholder="Ide írja be a telefonszámot" aria-labelledby="labelPhone">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="emailInputF2">E-mail cím*:</label>
-                                <input type="email" class="form-control" name="emailF2" id="emailInputF2" 
-                                        required minlength="3"
-                                        placeholder="Ide írja az e-mailcímet">
+                                <label class="input-group-text" for="emailInputF2" id="labelEmail">E-mail cím*:</label>
+                                <input type="email" class="form-control" name="emailF2" id="emailInputF2" required minlength="3" placeholder="Ide írja az e-mailcímet" aria-labelledby="labelEmail">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="ageInputF2">Életkor:</label>
-                                <input type="number" class="form-control" name="ageF2" id="ageInputF2" placeholder="Ide írja az életkorát" >
+                                <label class="input-group-text" for="ageInputF2" id="labelAge">Életkor:</label>
+                                <input type="number" class="form-control" name="ageF2" id="ageInputF2" placeholder="Ide írja az életkorát" aria-labelledby="labelAge">
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="messageTextareaF2">Üzenet:</label>
-                                <textarea class="form-control" name="messageF2" id="messageTextareaF2"></textarea>
+                                <label class="input-group-text" for="messageTextareaF2" id="labelMessage">Üzenet:</label>
+                                <textarea class="form-control" name="messageF2" id="messageTextareaF2" aria-labelledby="labelMessage"></textarea>
                             </div>
                             <div>
                                 <label>*: Kötelezően kitöltendő mező</label>
                             </div>
-                            <button class="btn btn-primary" type="submit">Elküld</button><!--"btn" es "btn-primary" Bootstrap classok-->
+                            <button class="btn btn-primary" type="submit" aria-label="Cikk elküldése" >Elküld</button><!--"btn" es "btn-primary" Bootstrap classok-->
                         </form>
                     </div>
                  
